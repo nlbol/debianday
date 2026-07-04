@@ -1,0 +1,31 @@
+[{
+  "name": "Facebook",
+  "key": "facebook",
+  "url": "https://www.facebook.com/groups/nucleolinux",
+  "icon": "facebook"
+}
+,{
+  "name": "Telegram",
+  "key": "telegram",
+  "url": "https://t.me/+Ou8hL-sMLrg1MTIx",
+  "icon": "send"
+}
+,{
+  "name": "GitHub",
+  "key": "github",
+  "url": "https://github.com/nlbol",
+  "icon": "github"
+}
+,{
+  "name": "YouTube",
+  "key": "youtube",
+  "url": "https://www.youtube.com/@NucleoLinuxBolivia",
+  "icon": "youtube"
+}
+,{
+  "name": "Website",
+  "key": "website",
+  "url": "https://debianday.nucleolinux.org",
+  "icon": "globe"
+}
+]

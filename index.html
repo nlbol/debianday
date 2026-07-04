@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" has-debian-bg>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DebianDay 2026</title>
+  <meta name="description" content="El evento más importante de la comunidad Debian en Latinoamérica. Conferencias, talleres y networking para toda la comunidad de software libre.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#D70A53">
+
+  <meta property="og:title" content="DebianDay 2026">
+  <meta property="og:description" content="El evento más importante de la comunidad Debian en Latinoamérica. Conferencias, talleres y networking para toda la comunidad de software libre.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://debianday.nucleolinux.org">
+  <meta property="og:image" content="https://debianday.nucleolinux.org/assets/img/logos/debian-logo.svg">
+  <meta property="og:locale" content="es_AR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DebianDay 2026">
+  <meta name="twitter:description" content="El evento más importante de la comunidad Debian en Latinoamérica. Conferencias, talleres y networking para toda la comunidad de software libre.">
+  <meta name="twitter:image" content="https://debianday.nucleolinux.org/assets/img/logos/debian-logo.svg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/icons/debian-favicon.svg">
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] } } }
+    }
+  </script>
+</head>
+<body>
+  <div class="debian-watermark" aria-hidden="true"></div>
+  <a href="#hero" class="skip-link">Saltar al contenido principal</a>
+
+  <div class="navbar-blur fixed top-0 left-0 right-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="navbar px-0">
+        <div class="navbar-start">
+          <a href="#hero" class="flex items-center gap-2">
+            
+            <span class="text-lg font-bold hidden sm:inline">
+              <span style="color:var(--color-primary);">Debian</span><span style="color:var(--color-secondary);">Day</span>
+              <span class="codename">Forky</span>
+            </span>
+          </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 gap-1">
+            <li><a href="#information" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Informacion</a></li><li><a href="#statistics" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Estadisticas</a></li><li><a href="#speakers" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Ponentes</a></li><li><a href="#schedule" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Cronograma</a></li><li><a href="#sponsors" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Patrocinadores</a></li><li><a href="#faq" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">FAQ</a></li><li><a href="#location" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Ubicacion</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end gap-2">
+          
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm rounded-full border-none text-white hidden sm:inline-flex shadow-md" style="background:var(--color-primary);">
+            <i data-lucide="ticket" class="w-4 h-4 mr-1"></i>
+            Registrarme
+          </a>
+          <button id="menu-toggle" class="btn btn-ghost btn-circle lg:hidden" aria-expanded="false" aria-label="Abrir menu">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
+      <ul class="menu menu-vertical p-4 gap-1">
+        <li><a href="#information" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Informacion</a></li><li><a href="#statistics" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Estadisticas</a></li><li><a href="#speakers" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Ponentes</a></li><li><a href="#schedule" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Cronograma</a></li><li><a href="#sponsors" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Patrocinadores</a></li><li><a href="#faq" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">FAQ</a></li><li><a href="#location" class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors">Ubicacion</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main id="main-content"></main>
+
+  <!-- Embedded data -->
+  <script>
+    window.DEBIANDAY_DATA = {
+      poster: "assets/img/poster.svg",
+      event: {
+  "title": "DebianDay 2026",
+  "subtitle": "Celebrando la libertad del software libre",
+  "description": "El evento más importante de la comunidad Debian en Latinoamérica. Conferencias, talleres y networking para toda la comunidad de software libre.",
+  "date": "15 de Agosto de 2026",
+  "time": "00:00 - 00:00",
+  "venue": "NULL",
+  "city": "Santa Cruz",
+  "country": "Bolivia",
+  "registerButton": "Registrarme",
+  "registerUrl": "https://example.com",
+  "domain": "https://debianday.nucleolinux.org",
+  "primaryColor": "#D70A53",
+  "secondaryColor": "#2B5797",
+  "accentColor": "#E8A0B0",
+  "hero": {
+    "title": "DebianDay",
+    "description": "Un evento para toda la comunidad: aprendé, compartí y colaborá con el ecosistema Debian.",
+    "buttonRegister": "Quiero asistir",
+    "buttonSchedule": "Ver cronograma",
+    "codename": "Forky"
+  },
+  "information": {
+    "title": "Sobre el evento",
+    "description": "DebianDay es un evento anual organizado por la comunidad Debian que reúne a entusiastas, desarrolladores y usuarios del sistema operativo universal.",
+    "objectives": "Difundir Debian, fomentar la colaboración, compartir conocimiento",
+    "audience": "Desarrolladores, sysadmins, estudiantes y entusiastas del software libre",
+    "organizer": "Comunidad Nucleo Linux Bolivia (NLBOL)"
+  },
+  "statistics": {
+    "conferences": "3",
+    "workshops": "3",
+    "speakers": "6",
+    "sponsors": "1",
+    "participants": "25+"
+  },
+  "location": {
+    "title": "NULL",
+    "description": "El evento se realizará en NULL, ubicado en , con fácil acceso en transporte público.",
+    "latitude": -17.775122,
+    "longitude": -63.193719,
+    "zoom": 17,
+    "markerIcon": "",
+    "markerWidth": 32,
+    "markerHeight": 40
+  },
+  "footer": {
+    "copyright": "DebianDay 2026",
+    "organizer": "Comunidad Nucleo Linux Bolivia",
+    "email": "fershouno@proton.me",
+    "license": "CC BY-SA 4.0"
+  },
+  "images": {
+    "favicon": "assets/img/icons/debian-favicon.svg",
+    "logo": "assets/img/logos/debian-logo.svg",
+    "poster": "assets/img/poster.svg"
+  },
+  "icons": {
+    "calendar": "calendar",
+    "location": "map-pin",
+    "clock": "clock",
+    "ticket": "ticket",
+    "menu": "menu",
+    "sun": "sun",
+    "moon": "moon",
+    "github": "github",
+    "linkedin": "linkedin",
+    "globe": "globe",
+    "target": "target",
+    "users": "users",
+    "heart": "heart",
+    "mail": "mail",
+    "youtube": "youtube",
+    "facebook": "facebook",
+    "instagram": "instagram",
+    "twitter": "twitter",
+    "speaker": "mic",
+    "faq": "help-circle",
+    "sponsor": "award",
+    "mastodon": "mastodon",
+    "telegram": "send",
+    "discord": "message-circle",
+    "matrix": "message-square",
+    "gitlab": "gitlab",
+    "website": "globe"
+  },
+  "appearance": {
+    "textSecondaryColor": "#FFFFFF"
+  },
+  "debian": {
+    "enableLogo": false,
+    "logoImage": "assets/img/logos/debian-favicon.svg",
+    "enableBackground": true,
+    "backgroundImage": "assets/img/background/debian-watermark.svg",
+    "backgroundOpacity": "0.03",
+    "backgroundSize": "contain",
+    "backgroundPosition": "center"
+  },
+  "settings": {
+    "defaultTheme": "dark",
+    "enableThemeSwitch": false,
+    "order": ["hero","information","statistics","speakers","schedule","sponsors","faq","location","footer"],
+    "visibility": {
+      "hero": true,
+      "information": true,
+      "statistics": true,
+      "speakers": true,
+      "schedule": true,
+      "location": true,
+      "sponsors": true,
+      "faq": true,
+      "footer": true
+    }
+  }
+},
+      speakers: [{
+  "photo": "assets/img/speakers/fershouno.jpeg",
+  "name": "Fersho Uno",
+  "role": "Administrador de Infraestructura",
+  "company": "Nucleo Linux Bolivia (NLBOL)",
+  "bio": "Contribuidor oficial de proyectos FOSS desde 2019. Especialista en Seguridad Informatica, Servidores y Redes.",
+  "github": "https://github.com/FershoUno",
+  "mastodon": "",
+  "linkedin": "https://www.linkedin.com/in/fershouno",
+  "web": "https://fershouno.me"
+}
+],
+      schedule: [{
+  "start": "09:00",
+  "end": "09:30",
+  "title": "Registro y bienvenida",
+  "speaker": "-",
+  "type": "Registro",
+  "location": "Entrada principal",
+  "description": "Acreditación y café de bienvenida",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "09:30",
+  "end": "10:15",
+  "title": "Debian: de 0 a 100",
+  "speaker": "Alguien Mas",
+  "type": "Conferencia",
+  "location": "Auditorio",
+  "description": "Historia y visión del proyecto Debian",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "10:15",
+  "end": "11:00",
+  "title": "Instalación de Debian para principiantes",
+  "speaker": "Fersho Uno",
+  "type": "Taller",
+  "location": "Auditorio",
+  "description": "Guía paso a paso para instalar Debian sin romperse la cabeza :D",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "11:00",
+  "end": "11:30",
+  "title": "Preguntas y Stickers",
+  "speaker": "—",
+  "type": "Pausa",
+  "location": "Auditorio",
+  "description": "Descanso con soda y algo",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "11:30",
+  "end": "12:00",
+  "title": "Debian en el servidor",
+  "speaker": "Fersho Uno",
+  "type": "Conferencia",
+  "location": "Auditorio",
+  "description": "Debian como servidor de producción",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "12:05",
+  "end": "12:20",
+  "title": "Cierre y sorteos",
+  "speaker": "Organizacion",
+  "type": "Charla",
+  "location": "Auditorio ",
+  "description": "Palabras finales y cierre del evento",
+  "color": "#0B0F1A"
+}
+],
+      faq: [{
+  "question": "¿El evento es gratuito?",
+  "answer": "Sí, DebianDay es completamente gratuito para todos los asistentes."
+}
+,{
+  "question": "¿Necesito conocimientos previos?",
+  "answer": "No, el evento está diseñado para todos los niveles, desde principiantes hasta expertos."
+}
+,{
+  "question": "¿Debo llevar mi computadora?",
+  "answer": "Recomendamos traer tu laptop para participar en los talleres prácticos."
+}
+,{
+  "question": "¿Habrá certificados?",
+  "answer": "No, no se entregarán certificados de asistencia."
+}
+,{
+  "question": "¿Habrá traducción?",
+  "answer": "Las charlas serán en español. Algunas podrían tener soporte en inglés."
+}
+],
+      sponsors: [{
+  "name": "Nucleo Linux Bolivia",
+  "logo": "assets/img/sponsors/nlbol.jpg",
+  "url": "https://nucleolinux.org",
+  "category": "Community"
+}
+,{
+  "name": "Nucleo Linux UAGRM",
+  "logo": "assets/img/sponsors/nluagrm.png",
+  "url": "https://nluagrm.org",
+  "category": "Community"
+}
+],
+      social: [{
+  "name": "Facebook",
+  "key": "facebook",
+  "url": "https://www.facebook.com/groups/nucleolinux",
+  "icon": "facebook"
+}
+,{
+  "name": "Telegram",
+  "key": "telegram",
+  "url": "https://t.me/+Ou8hL-sMLrg1MTIx",
+  "icon": "send"
+}
+,{
+  "name": "GitHub",
+  "key": "github",
+  "url": "https://github.com/nlbol",
+  "icon": "github"
+}
+,{
+  "name": "YouTube",
+  "key": "youtube",
+  "url": "https://www.youtube.com/@NucleoLinuxBolivia",
+  "icon": "youtube"
+}
+,{
+  "name": "Website",
+  "key": "website",
+  "url": "https://debianday.nucleolinux.org",
+  "icon": "globe"
+}
+]
+    };
+  </script>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

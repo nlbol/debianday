@@ -1,0 +1,61 @@
+[{
+  "start": "09:00",
+  "end": "09:30",
+  "title": "Registro y bienvenida",
+  "speaker": "-",
+  "type": "Registro",
+  "location": "Entrada principal",
+  "description": "Acreditación y café de bienvenida",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "09:30",
+  "end": "10:15",
+  "title": "Debian: de 0 a 100",
+  "speaker": "Alguien Mas",
+  "type": "Conferencia",
+  "location": "Auditorio",
+  "description": "Historia y visión del proyecto Debian",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "10:15",
+  "end": "11:00",
+  "title": "Instalación de Debian para principiantes",
+  "speaker": "Fersho Uno",
+  "type": "Taller",
+  "location": "Auditorio",
+  "description": "Guía paso a paso para instalar Debian sin romperse la cabeza :D",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "11:00",
+  "end": "11:30",
+  "title": "Preguntas y Stickers",
+  "speaker": "—",
+  "type": "Pausa",
+  "location": "Auditorio",
+  "description": "Descanso con soda y algo",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "11:30",
+  "end": "12:00",
+  "title": "Debian en el servidor",
+  "speaker": "Fersho Uno",
+  "type": "Conferencia",
+  "location": "Auditorio",
+  "description": "Debian como servidor de producción",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "12:05",
+  "end": "12:20",
+  "title": "Cierre y sorteos",
+  "speaker": "Organizacion",
+  "type": "Charla",
+  "location": "Auditorio ",
+  "description": "Palabras finales y cierre del evento",
+  "color": "#0B0F1A"
+}
+]

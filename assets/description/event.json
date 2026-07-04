@@ -1,0 +1,115 @@
+{
+  "title": "DebianDay 2026",
+  "subtitle": "Celebrando la libertad del software libre",
+  "description": "El evento más importante de la comunidad Debian en Latinoamérica. Conferencias, talleres y networking para toda la comunidad de software libre.",
+  "date": "15 de Agosto de 2026",
+  "time": "00:00 - 00:00",
+  "venue": "NULL",
+  "city": "Santa Cruz",
+  "country": "Bolivia",
+  "registerButton": "Registrarme",
+  "registerUrl": "https://example.com",
+  "domain": "https://debianday.nucleolinux.org",
+  "primaryColor": "#D70A53",
+  "secondaryColor": "#2B5797",
+  "accentColor": "#E8A0B0",
+  "hero": {
+    "title": "DebianDay",
+    "description": "Un evento para toda la comunidad: aprendé, compartí y colaborá con el ecosistema Debian.",
+    "buttonRegister": "Quiero asistir",
+    "buttonSchedule": "Ver cronograma",
+    "codename": "Forky"
+  },
+  "information": {
+    "title": "Sobre el evento",
+    "description": "DebianDay es un evento anual organizado por la comunidad Debian que reúne a entusiastas, desarrolladores y usuarios del sistema operativo universal.",
+    "objectives": "Difundir Debian, fomentar la colaboración, compartir conocimiento",
+    "audience": "Desarrolladores, sysadmins, estudiantes y entusiastas del software libre",
+    "organizer": "Comunidad Nucleo Linux Bolivia (NLBOL)"
+  },
+  "statistics": {
+    "conferences": "3",
+    "workshops": "3",
+    "speakers": "6",
+    "sponsors": "1",
+    "participants": "25+"
+  },
+  "location": {
+    "title": "NULL",
+    "description": "El evento se realizará en NULL, ubicado en , con fácil acceso en transporte público.",
+    "latitude": -17.775122,
+    "longitude": -63.193719,
+    "zoom": 17,
+    "markerIcon": "",
+    "markerWidth": 32,
+    "markerHeight": 40
+  },
+  "footer": {
+    "copyright": "DebianDay 2026",
+    "organizer": "Comunidad Nucleo Linux Bolivia",
+    "email": "fershouno@proton.me",
+    "license": "CC BY-SA 4.0"
+  },
+  "images": {
+    "favicon": "assets/img/icons/debian-favicon.svg",
+    "logo": "assets/img/logos/debian-logo.svg",
+    "poster": "assets/img/poster.svg"
+  },
+  "icons": {
+    "calendar": "calendar",
+    "location": "map-pin",
+    "clock": "clock",
+    "ticket": "ticket",
+    "menu": "menu",
+    "sun": "sun",
+    "moon": "moon",
+    "github": "github",
+    "linkedin": "linkedin",
+    "globe": "globe",
+    "target": "target",
+    "users": "users",
+    "heart": "heart",
+    "mail": "mail",
+    "youtube": "youtube",
+    "facebook": "facebook",
+    "instagram": "instagram",
+    "twitter": "twitter",
+    "speaker": "mic",
+    "faq": "help-circle",
+    "sponsor": "award",
+    "mastodon": "mastodon",
+    "telegram": "send",
+    "discord": "message-circle",
+    "matrix": "message-square",
+    "gitlab": "gitlab",
+    "website": "globe"
+  },
+  "appearance": {
+    "textSecondaryColor": "#FFFFFF"
+  },
+  "debian": {
+    "enableLogo": false,
+    "logoImage": "assets/img/logos/debian-favicon.svg",
+    "enableBackground": true,
+    "backgroundImage": "assets/img/background/debian-watermark.svg",
+    "backgroundOpacity": "0.03",
+    "backgroundSize": "contain",
+    "backgroundPosition": "center"
+  },
+  "settings": {
+    "defaultTheme": "dark",
+    "enableThemeSwitch": false,
+    "order": ["hero","information","statistics","speakers","schedule","sponsors","faq","location","footer"],
+    "visibility": {
+      "hero": true,
+      "information": true,
+      "statistics": true,
+      "speakers": true,
+      "schedule": true,
+      "location": true,
+      "sponsors": true,
+      "faq": true,
+      "footer": true
+    }
+  }
+}
