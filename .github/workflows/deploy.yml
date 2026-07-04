@@ -38,6 +38,9 @@ jobs:
           test -f public/index.html
           echo "Sitio generado correctamente"
 
+      - name: Crear CNAME para dominio personalizado
+        run: echo "debianday.nucleolinux.org" > public/CNAME
+
       - name: Publicar en rama public
         uses: peaceiris/actions-gh-pages@v4
         with:

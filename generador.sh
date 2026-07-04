@@ -48,6 +48,7 @@ HERO_TITULO="DebianDay"
 HERO_DESCRIPCION="Un evento para toda la comunidad: aprendé, compartí y colaborá con el ecosistema Debian."
 HERO_BOTON_REGISTRO="Quiero asistir"
 HERO_BOTON_CRONOGRAMA="Ver cronograma"
+EVENT_CODENAME="Forky"
 
 ####################################################
 # INFORMACION
@@ -73,7 +74,7 @@ CANTIDAD_PARTICIPANTES="25+"
 # Formato: "FOTO|NOMBRE|CARGO|EMPRESA|BIO|GITHUB|MASTODON|LINKEDIN|WEB"
 declare -a SPEAKERS
 SPEAKERS+=(
-  "assets/img/speakers/fershouno.jpeg|Fersho Uno|Administrador de Infraestructura|Grupo Editorial La Hoguera|Contribuidor oficial de proyectos FOSS desde 2019. Especialista en Seguridad Informatica, Servidores y Redes.|https://github.com/FershoUno||https://www.linkedin.com/in/fershouno|https://fershouno.me"
+  "assets/img/speakers/fershouno.jpeg|Fersho Uno|Administrador de Infraestructura|Nucleo Linux Bolivia (NLBOL)|Contribuidor oficial de proyectos FOSS desde 2019. Especialista en Seguridad Informatica, Servidores y Redes.|https://github.com/FershoUno||https://www.linkedin.com/in/fershouno|https://fershouno.me"
 )
 
 ####################################################
@@ -156,22 +157,21 @@ CORREO="fershouno@proton.me"
 LICENCIA="CC BY-SA 4.0"
 
 ####################################################
-# MASCOTAS
+# POSTER / IMAGEN PRINCIPAL
 ####################################################
-MASCOTA_TUX="assets/img/mascots/tux.svg"
-MASCOTA_GNU="assets/img/mascots/gnu.svg"
+POSTER_IMAGE="assets/img/poster.svg"
 
 ####################################################
 # LOGOS
 ####################################################
-ENABLE_DEBIAN_LOGO=true
-DEBIAN_LOGO_IMAGE="assets/img/logos/debian.svg"
+ENABLE_DEBIAN_LOGO=false
+DEBIAN_LOGO_IMAGE="assets/img/logos/debian-favicon.svg"
 
 ####################################################
 # CONFIGURACION DE IMAGENES
 ####################################################
-FAVICON="assets/img/icons/favicon.svg"
-LOGO_PRINCIPAL="assets/img/logos/logo.svg"
+FAVICON="assets/img/icons/debian-favicon.svg"
+LOGO_PRINCIPAL="assets/img/logos/debian-logo.svg"
 LOGO_CLARO="assets/img/logos/logo-light.svg"
 LOGO_OSCURO="assets/img/logos/logo-dark.svg"
 IMAGEN_HERO="assets/img/hero/hero-bg.svg"
@@ -256,7 +256,6 @@ DIRS=(
   "$OUTPUT_DIR/assets/img/hero"
   "$OUTPUT_DIR/assets/img/speakers"
   "$OUTPUT_DIR/assets/img/sponsors"
-  "$OUTPUT_DIR/assets/img/mascots"
   "$OUTPUT_DIR/assets/img/icons"
   "$OUTPUT_DIR/assets/img/logos"
   "$OUTPUT_DIR/assets/img/background"
@@ -321,7 +320,8 @@ generar_json_evento() {
     "title": "$(json_escape "$HERO_TITULO")",
     "description": "$(json_escape "$HERO_DESCRIPCION")",
     "buttonRegister": "$(json_escape "$HERO_BOTON_REGISTRO")",
-    "buttonSchedule": "$(json_escape "$HERO_BOTON_CRONOGRAMA")"
+    "buttonSchedule": "$(json_escape "$HERO_BOTON_CRONOGRAMA")",
+    "codename": "$(json_escape "$EVENT_CODENAME")"
   },
   "information": {
     "title": "$(json_escape "$INFO_TITULO")",
@@ -356,14 +356,7 @@ generar_json_evento() {
   "images": {
     "favicon": "$FAVICON",
     "logo": "$LOGO_PRINCIPAL",
-    "logoLight": "$LOGO_CLARO",
-    "logoDark": "$LOGO_OSCURO",
-    "hero": "$IMAGEN_HERO",
-    "heroBg": "$IMAGEN_HERO_BG",
-    "footerBg": "",
-    "banner": "",
-    "mascotTux": "$MASCOTA_TUX",
-    "mascotGnu": "$MASCOTA_GNU"
+    "poster": "$POSTER_IMAGE"
   },
   "icons": {
     "calendar": "$ICON_CALENDAR",
@@ -376,7 +369,6 @@ generar_json_evento() {
     "github": "$ICON_GITHUB",
     "linkedin": "$ICON_LINKEDIN",
     "globe": "$ICON_GLOBE",
-    "atSign": "$ICON_AT_SIGN",
     "target": "$ICON_TARGET",
     "users": "$ICON_USERS",
     "heart": "$ICON_HEART",
@@ -865,26 +857,30 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Mascots */
-.mascot-container {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mascot-container svg {
-  width: 100%;
+/* Poster image */
+.poster-img {
+  display: block;
+  max-width: 100%;
   height: auto;
-  transition: all 0.3s ease;
+  width: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.mascot-container:hover svg {
-  transform: scale(1.05) rotate(-2deg);
+.poster-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.18);
 }
 
-.mascot-sm svg { max-width: 60px; }
-.mascot-md svg { max-width: 100px; }
-.mascot-lg svg { max-width: 160px; }
+/* Codename (Toy Story style) */
+.codename {
+  font-family: 'Luckiest Guy', 'Comic Sans MS', 'Chalkboard SE', cursive;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+  display: inline;
+}
 
 /* Section dividers */
 .section-divider {
@@ -1084,11 +1080,11 @@ generar_js() {
       + '<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 min-h-[80vh] py-20">'
       + '<div class="flex-1 text-center lg:text-left" data-aos="fade-up" data-aos-duration="1000">'
       + '<div class="inline-flex items-center gap-3 mb-6" data-aos="fade-up" data-aos-delay="100">'
-      + '<div class="mascot-container mascot-md float-animation">' + d.tux + '</div>'
-      + '<span class="px-3 py-1.5 bg-[var(--color-primary-light)]/20 text-[var(--color-primary)] rounded-full text-sm font-semibold">' + e.date + '</span>'
+      + '<span class="px-3 py-1.5 bg-[var(--color-primary)] text-white rounded-full text-sm font-bold shadow-sm">' + e.date + '</span>'
       + '</div>'
       + '<h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.05] mb-6">'
       + '<span class="text-[var(--color-primary)]">Debian</span> <span class="text-[var(--color-secondary)]">Day</span>'
+      + '<span class="codename"> ' + e.hero.codename + '</span>'
       + '</h1>'
       + '<p class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">' + e.hero.description + '</p>'
       + '<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">'
@@ -1097,16 +1093,14 @@ generar_js() {
       + '<a href="#schedule" class="btn btn-lg rounded-full btn-outline btn-pulse shadow-lg hover:shadow-xl transition-all duration-300" style="border-color:var(--color-primary);color:var(--color-primary);" data-aos="fade-up" data-aos-delay="300">'
       + '<i ' + icn('calendar') + ' class="w-5 h-5 mr-2"></i>' + e.hero.buttonSchedule + '</a>'
       + '</div>'
-      + '<div class="flex items-center gap-6 mt-10 justify-center lg:justify-start text-sm text-gray-400" data-aos="fade-up" data-aos-delay="400">'
+      + '<div class="flex items-center gap-6 mt-10 justify-center lg:justify-start text-sm text-gray-500 dark:text-gray-300" data-aos="fade-up" data-aos-delay="400">'
       + '<span class="flex items-center gap-2"><i ' + icn('location') + ' class="w-4 h-4"></i> ' + e.venue + ', ' + e.city + '</span>'
       + '<span class="flex items-center gap-2"><i ' + icn('clock') + ' class="w-4 h-4"></i> ' + e.time + '</span>'
       + '</div></div>'
       + '<div class="flex-1 flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">'
-      + '<div class="relative">'
-      + '<div class="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-[var(--color-primary-light)]/30 to-[var(--color-accent)]/20 flex items-center justify-center float-animation">'
-      + '<div class="mascot-container mascot-lg">' + d.gnu + '</div></div>'
-      + '<div class="absolute -bottom-4 -right-4 w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-[var(--color-primary-light)]/20 flex items-center justify-center float-animation" style="animation-delay:-2s;">'
-      + '<div class="mascot-container" style="max-width:60px;">' + d.tux + '</div></div></div></div></div></div></section>';
+      + '<div class="relative w-full max-w-sm lg:max-w-md">'
+      + '<img src="' + d.poster + '" alt="' + e.title + ' Poster" class="poster-img" loading="lazy">'
+      + '</div></div></div></div></section>';
   }
 
   function renderInformation(d) {
@@ -1121,22 +1115,22 @@ generar_js() {
       + '<div class="w-14 h-14 rounded-2xl bg-[var(--color-primary-light)]/20 flex items-center justify-center mb-5">'
       + '<i ' + icn('target') + ' class="w-7 h-7 text-[var(--color-primary)]"></i></div>'
       + '<h3 class="text-xl font-bold mb-3">Objetivos</h3>'
-      + '<p class="text-gray-600 dark:text-gray-400 leading-relaxed">' + e.information.objectives + '</p></div>'
+      + '<p class="text-gray-600 dark:text-gray-300 leading-relaxed">' + e.information.objectives + '</p></div>'
       + '<div class="card bg-white dark:bg-gray-800/60 shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8 border border-gray-100 dark:border-gray-700/50" data-aos="fade-up" data-aos-delay="100">'
       + '<div class="w-14 h-14 rounded-2xl bg-[var(--color-accent)]/20 flex items-center justify-center mb-5">'
       + '<i ' + icn('users') + ' class="w-7 h-7 text-[var(--color-accent)]"></i></div>'
       + '<h3 class="text-xl font-bold mb-3">Publico</h3>'
-      + '<p class="text-gray-600 dark:text-gray-400 leading-relaxed">' + e.information.audience + '</p></div>'
+      + '<p class="text-gray-600 dark:text-gray-300 leading-relaxed">' + e.information.audience + '</p></div>'
       + '<div class="card bg-white dark:bg-gray-800/60 shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8 border border-gray-100 dark:border-gray-700/50" data-aos="fade-up" data-aos-delay="200">'
       + '<div class="w-14 h-14 rounded-2xl bg-[#a0c4e8]/20 flex items-center justify-center mb-5">'
       + '<i ' + icn('heart') + ' class="w-7 h-7 text-[#2B5797]"></i></div>'
       + '<h3 class="text-xl font-bold mb-3">Organiza</h3>'
-      + '<p class="text-gray-600 dark:text-gray-400 leading-relaxed">' + e.information.organizer + '</p></div>'
+      + '<p class="text-gray-600 dark:text-gray-300 leading-relaxed">' + e.information.organizer + '</p></div>'
       + '<div class="card bg-white dark:bg-gray-800/60 shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8 border border-gray-100 dark:border-gray-700/50" data-aos="fade-up" data-aos-delay="300">'
       + '<div class="w-14 h-14 rounded-2xl bg-[#c5a8e2]/20 flex items-center justify-center mb-5">'
       + '<i ' + icn('location') + ' class="w-7 h-7 text-[#7c3aed]"></i></div>'
       + '<h3 class="text-xl font-bold mb-3">Ubicacion</h3>'
-      + '<p class="text-gray-600 dark:text-gray-400 leading-relaxed">' + e.venue + ', ' + e.city + ', ' + e.country + '</p></div>'
+      + '<p class="text-gray-600 dark:text-gray-300 leading-relaxed">' + e.venue + ', ' + e.city + ', ' + e.country + '</p></div>'
       + '</div></div></section>';
   }
 
@@ -1159,7 +1153,7 @@ generar_js() {
     for (var i = 0; i < items.length; i++) {
       html += '<div class="stat-item" data-aos="zoom-in" data-aos-delay="' + (i * 100) + '">'
         + '<div class="stat-number" data-target="' + items[i].target + '">0</div>'
-        + '<div class="text-gray-500 dark:text-gray-400 mt-2 font-medium">' + items[i].label + '</div></div>';
+        + '<div class="text-gray-500 dark:text-gray-300 mt-2 font-medium text-xs sm:text-sm">' + items[i].label + '</div></div>';
     }
     html += '</div></div></section>';
     return html;
@@ -1186,9 +1180,9 @@ generar_js() {
         + '<div class="flex flex-col items-center text-center">'
         + '<img src="' + sp.photo + '" alt="' + sp.name + '" class="speaker-img mb-5" loading="lazy">'
         + '<h3 class="text-xl font-bold mb-1">' + sp.name + '</h3>'
-        + '<p class="text-gray-500 dark:text-gray-400 text-sm mb-1">' + sp.role + '</p>'
+        + '<p class="text-gray-500 dark:text-gray-300 text-sm mb-1">' + sp.role + '</p>'
         + company
-        + '<p class="text-gray-500 dark:text-gray-400 text-sm mt-4 leading-relaxed">' + sp.bio + '</p>'
+        + '<p class="text-gray-500 dark:text-gray-300 text-sm mt-4 leading-relaxed">' + sp.bio + '</p>'
         + '<div class="flex gap-2 mt-5">' + social + '</div></div></div>';
     }
     html += '</div></div></section>';
@@ -1203,7 +1197,7 @@ generar_js() {
       + '<div class="text-center mb-16" data-aos="fade-up">'
       + '<h2 class="section-title mb-4">Cronograma</h2>'
       + '<p class="section-subtitle">Agenda completa del evento</p>'
-      + '<p class="text-sm text-gray-400 mt-2">' + d.event.date + ' \u2014 ' + d.event.venue + ', ' + d.event.city + '</p></div>'
+      + '<p class="text-sm text-gray-500 dark:text-gray-300 mt-2">' + d.event.date + ' \u2014 ' + d.event.venue + ', ' + d.event.city + '</p></div>'
       + '<div class="schedule-list">';
     for (var i = 0; i < list.length; i++) {
       var sl = list[i];
@@ -1214,11 +1208,11 @@ generar_js() {
         + '<span class="schedule-type" style="background:' + color + ';">' + sl.type + '</span>'
         + '</div>'
         + '<h3 class="text-lg font-bold mb-1 leading-snug">' + sl.title + '</h3>'
-        + '<p class="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-2 flex-wrap">'
+        + '<p class="text-sm text-gray-500 dark:text-gray-300 flex items-center gap-2 flex-wrap">'
         + '<span class="flex items-center gap-1"><svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>' + sl.speaker + '</span>'
         + '<span class="text-gray-300 dark:text-gray-600 hidden sm:inline">|</span>'
         + '<span class="flex items-center gap-1"><svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>' + sl.location + '</span></p>'
-        + '<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mt-2">' + sl.description + '</p></div>';
+        + '<p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed mt-2">' + sl.description + '</p></div>';
     }
     html += '</div></div></section>';
     return html;
@@ -1269,7 +1263,7 @@ generar_js() {
       html += '<div class="collapse collapse-arrow bg-white dark:bg-gray-800/60 border border-gray-100 dark:border-gray-700/50 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="' + (i * 50) + '">'
         + '<input type="radio" name="faq-accordion" id="faq-' + i + '" ' + checked + ' />'
         + '<label for="faq-' + i + '" class="collapse-title text-lg font-semibold cursor-pointer">' + list[i].question + '</label>'
-        + '<div class="collapse-content"><p class="text-gray-600 dark:text-gray-400 leading-relaxed">' + list[i].answer + '</p></div></div>';
+        + '<div class="collapse-content"><p class="text-gray-600 dark:text-gray-300 leading-relaxed">' + list[i].answer + '</p></div></div>';
     }
     html += '</div></div></section>';
     return html;
@@ -1336,12 +1330,11 @@ generar_js() {
       + '<div class="grid grid-cols-1 md:grid-cols-3 gap-12">'
       + '<div data-aos="fade-up" data-aos-delay="0">'
       + '<div class="flex items-center gap-3 mb-4">'
-      + '<div class="mascot-container" style="max-width:40px;">' + d.tux + '</div>'
-      + '<span class="text-xl font-bold"><span class="text-[var(--color-primary)]">Debian</span><span class="text-[var(--color-secondary)]">Day</span></span></div>'
-      + '<p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">' + e.description + '</p></div>'
+      + '<span class="text-xl font-bold"><span class="text-[var(--color-primary)]">Debian</span><span class="text-[var(--color-secondary)]">Day</span><span class="codename"> ' + d.event.hero.codename + '</span></span></div>'
+      + '<p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">' + e.description + '</p></div>'
       + '<div data-aos="fade-up" data-aos-delay="100">'
       + '<h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">Contacto</h3>'
-      + '<ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">' + contactHtml + '</ul></div>'
+      + '<ul class="space-y-3 text-sm text-gray-500 dark:text-gray-300">' + contactHtml + '</ul></div>'
       + '<div data-aos="fade-up" data-aos-delay="200">'
       + '<h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">Redes</h3>'
       + '<div class="flex flex-wrap gap-2">' + socialHtml + '</div></div></div>'
@@ -1535,6 +1528,49 @@ generar_js() {
         if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
       }
     });
+
+    // Keyboard navigation: arrow keys between sections
+    (function () {
+      var sections = document.querySelectorAll('section[id]');
+      var ids = [];
+      for (var i = 0; i < sections.length; i++) {
+        ids.push(sections[i].id);
+      }
+      if (!ids.length) return;
+      var busy = false;
+      function onKey(e) {
+        var el = document.activeElement;
+        if (el) {
+          var t = el.tagName;
+          if (t === 'INPUT' || t === 'TEXTAREA' || t === 'SELECT') return;
+          if (el.isContentEditable) return;
+        }
+        if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+        e.preventDefault();
+        if (busy) return;
+        busy = true;
+        setTimeout(function () { busy = false; }, 600);
+        var best = ids[0], bestDist = Infinity;
+        for (var i = 0; i < ids.length; i++) {
+          var el = document.getElementById(ids[i]);
+          if (!el) continue;
+          var d = Math.abs(el.getBoundingClientRect().top);
+          if (d < bestDist) { bestDist = d; best = ids[i]; }
+        }
+        var idx = ids.indexOf(best);
+        if (idx < 0) return;
+        var next = e.key === 'ArrowDown'
+          ? Math.min(idx + 1, ids.length - 1)
+          : Math.max(idx - 1, 0);
+        if (next === idx) return;
+        var target = document.getElementById(ids[next]);
+        if (target) {
+          var top = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      }
+      document.addEventListener('keydown', onKey);
+    })();
   }
 
   if (document.readyState === 'loading') {
@@ -1545,66 +1581,6 @@ generar_js() {
 
 })();
 JSEOF
-}
-
-# ============================================================
-# GENERAR: Mascota SVG (Tux)
-# ============================================================
-generar_tux_svg() {
-  if [ -f "$ASSETS_SRC/img/mascots/tux.svg" ]; then
-    cp "$ASSETS_SRC/img/mascots/tux.svg" "$OUTPUT_DIR/assets/img/mascots/tux.svg"
-  else
-    cat > "$OUTPUT_DIR/assets/img/mascots/tux.svg" << 'SVGEOF'
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
-  <circle cx="100" cy="120" r="90" fill="#2B2B2B" opacity="0.9"/>
-  <ellipse cx="100" cy="140" rx="70" ry="80" fill="#1a1a1a"/>
-  <ellipse cx="100" cy="100" rx="60" ry="50" fill="#333"/>
-  <ellipse cx="85" cy="90" rx="10" ry="8" fill="white"/>
-  <ellipse cx="115" cy="90" rx="10" ry="8" fill="white"/>
-  <ellipse cx="87" cy="92" rx="5" ry="5" fill="#1a1a1a"/>
-  <ellipse cx="117" cy="92" rx="5" ry="5" fill="#1a1a1a"/>
-  <ellipse cx="100" cy="108" rx="8" ry="4" fill="#FF8C00"/>
-  <path d="M70 75 Q100 55 130 75" stroke="#555" stroke-width="2" fill="none"/>
-  <ellipse cx="70" cy="170" rx="25" ry="15" fill="#1a1a1a" transform="rotate(-15 70 170)"/>
-  <ellipse cx="130" cy="170" rx="25" ry="15" fill="#1a1a1a" transform="rotate(15 130 170)"/>
-  <ellipse cx="60" cy="200" rx="20" ry="10" fill="#333" transform="rotate(-10 60 200)"/>
-  <ellipse cx="140" cy="200" rx="20" ry="10" fill="#333" transform="rotate(10 140 200)"/>
-  <circle cx="40" cy="85" r="12" fill="#FFD700" opacity="0.3"/>
-  <circle cx="35" cy="80" r="3" fill="#FFD700" opacity="0.5"/>
-</svg>
-SVGEOF
-  fi
-}
-
-# ============================================================
-# GENERAR: Mascota SVG (GNU)
-# ============================================================
-generar_gnu_svg() {
-  if [ -f "$ASSETS_SRC/img/mascots/gnu.svg" ]; then
-    cp "$ASSETS_SRC/img/mascots/gnu.svg" "$OUTPUT_DIR/assets/img/mascots/gnu.svg"
-  else
-    cat > "$OUTPUT_DIR/assets/img/mascots/gnu.svg" << 'SVGEOF'
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
-  <ellipse cx="100" cy="130" rx="55" ry="70" fill="#8B4513" opacity="0.85"/>
-  <ellipse cx="100" cy="120" rx="50" ry="45" fill="#A0522D"/>
-  <path d="M60 80 Q100 40 140 80" stroke="#6B3410" stroke-width="3" fill="#8B4513"/>
-  <path d="M70 70 L65 45 L75 60" fill="#6B3410"/>
-  <path d="M130 70 L135 45 L125 60" fill="#6B3410"/>
-  <ellipse cx="85" cy="110" rx="8" ry="6" fill="#1a1a1a"/>
-  <ellipse cx="115" cy="110" rx="8" ry="6" fill="#1a1a1a"/>
-  <ellipse cx="85" cy="112" rx="3" ry="2" fill="white" opacity="0.8"/>
-  <ellipse cx="115" cy="112" rx="3" ry="2" fill="white" opacity="0.8"/>
-  <path d="M92 125 Q100 132 108 125" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-  <rect x="90" y="175" width="20" height="40" rx="3" fill="#A0522D"/>
-  <rect x="65" y="185" width="15" height="35" rx="5" fill="#8B4513" transform="rotate(-20 72 200)"/>
-  <rect x="120" y="185" width="15" height="35" rx="5" fill="#8B4513" transform="rotate(20 127 200)"/>
-  <rect x="80" y="195" width="12" height="30" rx="4" fill="#6B3410" transform="rotate(-10 86 210)"/>
-  <rect x="108" y="195" width="12" height="30" rx="4" fill="#6B3410" transform="rotate(10 114 210)"/>
-  <ellipse cx="100" cy="168" rx="20" ry="8" fill="#A0522D"/>
-  <path d="M100 168 L95 178 L105 178 Z" fill="#6B3410"/>
-</svg>
-SVGEOF
-  fi
 }
 
 # ============================================================
@@ -1680,6 +1656,37 @@ SVGEOF
 }
 
 # ============================================================
+# GENERAR: Poster del evento
+# ============================================================
+generar_poster() {
+  local src_path="$POSTER_IMAGE"
+  local out_path="$OUTPUT_DIR/$POSTER_IMAGE"
+  if [ -f "$src_path" ]; then
+    mkdir -p "$(dirname "$out_path")"
+    cp "$src_path" "$out_path"
+  else
+    mkdir -p "$(dirname "$out_path")"
+    cat > "$out_path" << 'SVGEOF'
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" fill="none">
+  <rect width="400" height="560" rx="24" fill="#1a1a2e"/>
+  <rect x="16" y="16" width="368" height="528" rx="16" fill="none" stroke="#D70A53" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="200" y="120" font-family="system-ui, sans-serif" font-size="32" font-weight="800" fill="#D70A53" text-anchor="middle">DebianDay</text>
+  <text x="200" y="160" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#E8A0B0" text-anchor="middle">Forky</text>
+  <text x="200" y="220" font-family="system-ui, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Poster del evento</text>
+  <line x1="80" y1="250" x2="320" y2="250" stroke="#2B5797" stroke-width="1"/>
+  <text x="200" y="290" font-family="system-ui, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Agrega tu imagen personalizada</text>
+  <text x="200" y="310" font-family="system-ui, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">en assets/img/poster.png</text>
+  <line x1="80" y1="340" x2="320" y2="340" stroke="#2B5797" stroke-width="1"/>
+  <text x="200" y="380" font-family="system-ui, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Configura POSTER_IMAGE</text>
+  <text x="200" y="400" font-family="system-ui, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">en generador.sh</text>
+  <circle cx="200" cy="480" r="40" fill="#D70A53" opacity="0.15"/>
+  <text x="200" y="490" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#D70A53" text-anchor="middle">2026</text>
+</svg>
+SVGEOF
+  fi
+}
+
+# ============================================================
 # GENERAR: Placeholder para speakers
 # ============================================================
 generar_speaker_placeholder() {
@@ -1738,10 +1745,6 @@ SVGEOF
 generar_html() {
   echo "  Generando HTML..."
 
-  # Build inline SVG data for mascots
-  local TUX_SVG=$(cat "$OUTPUT_DIR/assets/img/mascots/tux.svg" | sed 's/"/\\"/g' | tr -d '\n')
-  local GNU_SVG=$(cat "$OUTPUT_DIR/assets/img/mascots/gnu.svg" | sed 's/"/\\"/g' | tr -d '\n')
-
   # Theme toggle button (configurable)
   local THEME_TOGGLE_HTML=""
   if [ "$ENABLE_THEME_SWITCH" = "true" ]; then
@@ -1780,7 +1783,7 @@ generar_html() {
   NAV_LABELS[faq]="FAQ"
   NAV_LABELS[location]="Ubicacion"
   for section in "${SECTION_ORDER[@]}"; do
-    if [ "$section" = "footer" ]; then continue; fi
+    if [ "$section" = "footer" ] || [ "$section" = "hero" ]; then continue; fi
     local label="${NAV_LABELS[$section]:-$section}"
     NAV_ITEMS+="<li><a href=\"#$section\" class=\"text-sm font-medium hover:text-[var(--color-primary)] transition-colors\">$label</a></li>"
   done
@@ -1812,6 +1815,9 @@ generar_html() {
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet">
@@ -1836,11 +1842,9 @@ generar_html() {
         <div class="navbar-start">
           <a href="#hero" class="flex items-center gap-2">
             $DEBIAN_LOGO_NAV
-            <div class="mascot-container" style="max-width:32px;">
-              $(cat "$OUTPUT_DIR/assets/img/mascots/tux.svg")
-            </div>
             <span class="text-lg font-bold hidden sm:inline">
               <span style="color:var(--color-primary);">Debian</span><span style="color:var(--color-secondary);">Day</span>
+              <span class="codename">$EVENT_CODENAME</span>
             </span>
           </a>
         </div>
@@ -1873,8 +1877,7 @@ generar_html() {
   <!-- Embedded data -->
   <script>
     window.DEBIANDAY_DATA = {
-      tux: "$TUX_SVG",
-      gnu: "$GNU_SVG",
+      poster: "$POSTER_IMAGE",
       event: $(cat "$OUTPUT_DIR/assets/description/event.json"),
       speakers: $(cat "$OUTPUT_DIR/assets/description/speakers.json"),
       schedule: $(cat "$OUTPUT_DIR/assets/description/schedule.json"),
@@ -2025,7 +2028,6 @@ mostrar_resumen() {
   echo "  │   └── img/"
   echo "  │       ├── speakers/ (${#SPEAKERS[@]})"
   echo "  │       ├── sponsors/ (${#SPONSORS[@]})"
-  echo "  │       ├── mascots/"
   echo "  │       ├── icons/"
   echo "  │       ├── hero/"
   echo "  │       └── logos/"
@@ -2051,11 +2053,10 @@ main() {
   copiar_assets_desde_fuente
   generar_css
   generar_js
-  generar_tux_svg
-  generar_gnu_svg
   generar_logo_svg
   generar_hero_svg
   generar_favicon
+  generar_poster
 
   # Clean up old placeholder files that no longer match config
   rm -f "$OUTPUT_DIR/assets/img/speakers/"speaker*.svg "$OUTPUT_DIR/assets/img/sponsors/"sponsor*.svg
