@@ -20,7 +20,7 @@ SUBTITULO="Celebrando la libertad del software libre"
 DESCRIPCION="El evento más importante de la comunidad Debian en Latinoamérica. Conferencias, talleres y networking para toda la comunidad de software libre."
 FECHA="15 de Agosto de 2026"
 HORA="00:00 - 00:00"
-LUGAR="UAGRM - Salón auditorio Politecnica"
+LUGAR="NULL"
 CIUDAD="Santa Cruz"
 PAIS="Bolivia"
 BOTON_REGISTRO="Registrarme"
@@ -96,8 +96,8 @@ CRONOGRAMA+=(
 LATITUD="-17.775122"
 LONGITUD="-63.193719"
 ZOOM="17"
-TITULO_UBICACION="UAGRM - Salón auditorio Politecnica"
-DESCRIPCION_UBICACION="El evento se realizará en el Centro de Convenciones, ubicado en el corazón de la ciudad, con fácil acceso en transporte público."
+TITULO_UBICACION="NULL"
+DESCRIPCION_UBICACION="El evento se realizará en NULL, ubicado en , con fácil acceso en transporte público."
 
 ####################################################
 # CONFIGURACION DEL MAPA
@@ -134,7 +134,7 @@ SPONSORS+=(
 # REDES SOCIALES
 ####################################################
 declare -A SOCIAL
-SOCIAL[facebook]="https://facebook.com/"
+SOCIAL[facebook]="https://www.facebook.com/groups/nucleolinux"
 SOCIAL[instagram]=""
 SOCIAL[x]=""
 SOCIAL[telegram]="https://t.me/+Ou8hL-sMLrg1MTIx"
