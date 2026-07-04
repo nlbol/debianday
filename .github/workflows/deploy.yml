@@ -1,0 +1,47 @@
+name: Build & Deploy DebianDay
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Dar permisos
+        run: chmod +x generador.sh
+
+      - name: Ejecutar generador
+        run: ./generador.sh
+
+      - name: Verificar carpeta public
+        run: |
+          if [ ! -d public ]; then
+            echo "Error: no existe la carpeta public"
+            exit 1
+          fi
+
+      - name: Verificar archivos esenciales
+        run: |
+          test -f public/index.html
+          echo "Sitio generado correctamente"
+
+      - name: Publicar en rama public
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: public
+          publish_dir: ./public
+          force_orphan: true

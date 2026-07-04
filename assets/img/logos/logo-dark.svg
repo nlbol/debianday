@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <text x="40" y="80" font-family="system-ui, sans-serif" font-size="60" font-weight="800" fill="#D70A53">Debian</text>
+  <text x="220" y="80" font-family="system-ui, sans-serif" font-size="60" font-weight="300" fill="#2B5797">Day</text>
+  <circle cx="320" cy="30" r="6" fill="#E8A0B0" opacity="0.6"/>
+  <circle cx="340" cy="20" r="4" fill="#A8D5E2" opacity="0.5"/>
+  <circle cx="355" cy="35" r="3" fill="#C5A8E2" opacity="0.4"/>
+</svg>
