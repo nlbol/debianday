@@ -19,8 +19,8 @@ TITULO_EVENTO="DebianDay 2026"
 SUBTITULO="Celebrando la libertad del software libre"
 DESCRIPCION="El evento más importante de la comunidad Debian en Latinoamérica. Conferencias, talleres y networking para toda la comunidad de software libre."
 FECHA="15 de Agosto de 2026"
-HORA="00:00 - 00:00"
-LUGAR="NULL"
+HORA="09:00 - 12:30"
+LUGAR="SALÓN AUDITORIO - FICCT"
 CIUDAD="Santa Cruz"
 PAIS="Bolivia"
 BOTON_REGISTRO="Registrarme"
@@ -48,7 +48,7 @@ HERO_TITULO="DebianDay"
 HERO_DESCRIPCION="Un evento para toda la comunidad: aprendé, compartí y colaborá con el ecosistema Debian."
 HERO_BOTON_REGISTRO="Quiero asistir"
 HERO_BOTON_CRONOGRAMA="Ver cronograma"
-EVENT_CODENAME="Forky"
+EVENT_CODENAME="Santa Cruz"
 
 ####################################################
 # INFORMACION
@@ -74,7 +74,7 @@ CANTIDAD_PARTICIPANTES="25+"
 # Formato: "FOTO|NOMBRE|CARGO|EMPRESA|BIO|GITHUB|MASTODON|LINKEDIN|WEB"
 declare -a SPEAKERS
 SPEAKERS+=(
-  "assets/img/speakers/fershouno.jpeg|Fersho Uno|Administrador de Infraestructura|Nucleo Linux Bolivia (NLBOL)|Contribuidor oficial de proyectos FOSS desde 2019. Especialista en Seguridad Informatica, Servidores y Redes.|https://github.com/FershoUno||https://www.linkedin.com/in/fershouno|https://fershouno.me"
+  "assets/img/speakers/fershouno.jpeg|Fersho Uno|Administrador de Infraestructura|FershoUno|Miembro de la comunidad Nucleo Linux Bolivia y contribuidor de proyectos FOSS. Especialista en Seguridad Informatica, Servidores y Redes.|https://github.com/FershoUno||https://www.linkedin.com/in/fershouno|https://fershouno.me"
 )
 
 ####################################################
@@ -94,8 +94,8 @@ CRONOGRAMA+=(
 ####################################################
 # UBICACION
 ####################################################
-LATITUD="-17.775122"
-LONGITUD="-63.193719"
+LATITUD="-17.776166"
+LONGITUD="-63.195052"
 ZOOM="17"
 TITULO_UBICACION="NULL"
 DESCRIPCION_UBICACION="El evento se realizará en NULL, ubicado en , con fácil acceso en transporte público."
