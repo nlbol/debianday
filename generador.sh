@@ -20,11 +20,11 @@ SUBTITULO="Celebrando la libertad del software libre"
 DESCRIPCION="El evento más importante de la comunidad Debian en Latinoamérica. Conferencias, talleres y networking para toda la comunidad de software libre."
 FECHA="15 de Agosto de 2026"
 HORA="09:00 - 12:30"
-LUGAR="SALÓN AUDITORIO - FICCT"
+LUGAR="FICCT - UAGRM"
 CIUDAD="Santa Cruz"
 PAIS="Bolivia"
 BOTON_REGISTRO="Registrarme"
-URL_REGISTRO="https://example.com"
+URL_REGISTRO="https://cloud.nluagrm.org"
 DOMINIO="https://debianday.nucleolinux.org"
 
 ####################################################
@@ -40,6 +40,13 @@ TEXT_SECONDARY_COLOR="#FFFFFF"
 ####################################################
 TEMA_PREDETERMINADO="dark"
 ENABLE_THEME_SWITCH=false
+
+####################################################
+# PALETA DE COLOR (Temas)
+# Valores: default, debian, santa-cruz, terminal, midnight,
+#          nord, dracula, catppuccin, gruvbox, ubuntu, mint, solarized
+####################################################
+THEME="default"
 
 ####################################################
 # HERO
@@ -63,9 +70,9 @@ INFO_ORGANIZA="Comunidad Nucleo Linux Bolivia (NLBOL)"
 # ESTADISTICAS
 ####################################################
 CANTIDAD_CONFERENCIAS="3"
-CANTIDAD_TALLERES="3"
-CANTIDAD_PONENTES="6"
-CANTIDAD_PATROCINADORES="1"
+CANTIDAD_TALLERES="1"
+CANTIDAD_PONENTES="4"
+CANTIDAD_PATROCINADORES="3"
 CANTIDAD_PARTICIPANTES="25+"
 
 ####################################################
@@ -74,7 +81,9 @@ CANTIDAD_PARTICIPANTES="25+"
 # Formato: "FOTO|NOMBRE|CARGO|EMPRESA|BIO|GITHUB|MASTODON|LINKEDIN|WEB"
 declare -a SPEAKERS
 SPEAKERS+=(
-  "assets/img/speakers/fershouno.jpeg|Fersho Uno|Administrador de Infraestructura|FershoUno|Miembro de la comunidad Nucleo Linux Bolivia y contribuidor de proyectos FOSS. Especialista en Seguridad Informatica, Servidores y Redes.|https://github.com/FershoUno||https://www.linkedin.com/in/fershouno|https://fershouno.me"
+  "assets/img/speakers/fershouno.jpeg|Fersho Uno|Administrador de Infraestructura|FershoUno|Miembro de Nucleo Linux Bolivia y contribuidor FOSS. Especialista en Infraestructura TI.|https://github.com/FershoUno||https://www.linkedin.com/in/fershouno|https://fershouno.me"
+  "assets/img/speakers/rudy.jpeg|Rudy Flores|Miembro de la Comunidad Nucleo Linux Bolivia|MrRobot|investigador||||"
+  "assets/img/speakers/alex.jpeg|Alex Valdivia Vega|Miembro de la Comunidad Nucleo Linux Bolivia|AlexPower|Investigador||||"
 )
 
 ####################################################
@@ -83,12 +92,12 @@ SPEAKERS+=(
 # Formato: "HORA_INICIO|HORA_FIN|TITULO|PONENTE|TIPO|UBICACION|DESCRIPCION|COLOR"
 declare -a CRONOGRAMA
 CRONOGRAMA+=(
-  "09:00|09:30|Registro y bienvenida|-|Registro|Entrada principal|Acreditación y café de bienvenida|#0B0F1A"
-  "09:30|10:15|Debian: de 0 a 100|Alguien Mas|Conferencia|Auditorio|Historia y visión del proyecto Debian|#0B0F1A"
-  "10:15|11:00|Instalación de Debian para principiantes|Fersho Uno|Taller|Auditorio|Guía paso a paso para instalar Debian sin romperse la cabeza :D|#0B0F1A"
-  "11:00|11:30|Preguntas y Stickers|—|Pausa|Auditorio|Descanso con soda y algo|#0B0F1A"
-  "11:30|12:00|Debian en el servidor|Fersho Uno|Conferencia|Auditorio|Debian como servidor de producción|#0B0F1A"
-  "12:05|12:20|Cierre y sorteos|Organizacion|Charla|Auditorio |Palabras finales y cierre del evento|#0B0F1A"
+  "09:00|09:30|Registro y bienvenida|Organización|Registro|Entrada principal|Presentación del DebianDay|#0B0F1A"
+  "09:30|10:15|Entre el Commit y el Boot: Vulnerando Entornos mediante Automatización Estándar|Fersho Uno|Conferencia|Auditorio|Historia y visión del proyecto Debian|#0B0F1A"
+  "10:15|11:00|MiniOS Potencia máxima en tu PC|Alex Valdivia Vega|Conferencia|Auditorio|Sacale el jugo a tu ordenador con la distro mas potente y ligera|#0B0F1A"
+  "10:15|11:15||Fersho Uno|Taller|Laboratorio|El Arte de Empaquetar: Construye tus propios .deb paso a paso|#0B0F1A"
+  "11:15|12:00|Porque Aprender Linux|Rudy Flores|Conferencia|Auditorio|Conoce las ventajas de poder aprender Linux|#0B0F1A"
+  "12:05|12:20|Cierre y sorteos|Organizacion|Despedida|Auditorio|Palabras finales y cierre del evento|#0B0F1A"
 )
 
 ####################################################
@@ -97,8 +106,8 @@ CRONOGRAMA+=(
 LATITUD="-17.776166"
 LONGITUD="-63.195052"
 ZOOM="17"
-TITULO_UBICACION="NULL"
-DESCRIPCION_UBICACION="El evento se realizará en NULL, ubicado en , con fácil acceso en transporte público."
+TITULO_UBICACION="Ubicación"
+DESCRIPCION_UBICACION="El evento se realizará en El Salón Auditorio 4to Piso Modulo 236, ubicado en la Universidad Autónoma Gabriel René Moreno, con fácil acceso en transporte público."
 
 ####################################################
 # CONFIGURACION DEL MAPA
@@ -127,8 +136,9 @@ FAQ+=(
 # Categorias: Gold, Silver, Bronze, Community
 declare -a SPONSORS
 SPONSORS+=(
-  "Nucleo Linux Bolivia|assets/img/sponsors/nlbol.jpg|https://nucleolinux.org|Community"
+  "Nucleo Linux Bolivia|assets/img/sponsors/nlbol.png|https://nucleolinux.org|Community"
   "Nucleo Linux UAGRM|assets/img/sponsors/nluagrm.png|https://nluagrm.org|Community"
+  "FICCT|assets/img/sponsors/ficct.png|httpa://ficct.uagrm.edu.bo"
 )
 
 ####################################################
@@ -211,7 +221,7 @@ ICON_TWITTER="twitter"
 ICON_SPEAKER="mic"
 ICON_FAQ="help-circle"
 ICON_SPONSOR="award"
-ICON_MASTODON="mastodon"
+ICON_MASTODON="share-2"
 ICON_TELEGRAM="send"
 ICON_DISCORD="message-circle"
 ICON_MATRIX="message-square"
@@ -538,25 +548,314 @@ JSONEOF
 }
 
 # ============================================================
+# PALETAS DE COLOR (Temas)
+# Define las variables de color para cada tema.
+# ============================================================
+themes_define() {
+  case "$THEME" in
+    default)
+      T_PRIMARY="$COLOR_PRIMARIO"; T_SECONDARY="$COLOR_SECUNDARIO"; T_ACCENT="$COLOR_ACENTO"
+      T_PRIMARY_LIGHT="#f4a0b8"; T_PRIMARY_DARK="#a0083e"; T_PRIMARY_RGB="215,10,83"
+      T_BG_LIGHT="#fafafa"; T_BG_DARK="#1a1a2e"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#25253d"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(26,26,46,0.35)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(26,26,46,0.8)"
+      T_GLASS_LIGHT="rgba(255,255,255,0.15)"; T_GLASS_DARK="rgba(30,30,60,0.4)"
+      T_GLASS_BORDER_LIGHT="rgba(255,255,255,0.2)"; T_GLASS_BORDER_DARK="rgba(255,255,255,0.08)"
+      T_TEXT_LIGHT="#1a1a2e"; T_TEXT_DARK="#e5e7eb"
+      T_MUTED_LIGHT="#4b5563"; T_MUTED_DARK="#9ca3af"
+      T_BORDER_LIGHT="#e5e7eb"; T_BORDER_DARK="rgba(75,85,99,0.5)"
+      T_STAT_A_LIGHT="$COLOR_PRIMARIO"; T_STAT_B_LIGHT="$COLOR_ACENTO"
+      T_STAT_A_DARK="#f4a0b8"; T_STAT_B_DARK="#a0c4e8"
+      ;;
+    debian)
+      T_PRIMARY="#D70A53"; T_SECONDARY="#7A0E33"; T_ACCENT="#F2B8C4"
+      T_PRIMARY_LIGHT="#f4a0b8"; T_PRIMARY_DARK="#a0083e"; T_PRIMARY_RGB="215,10,83"
+      T_BG_LIGHT="#fdf6f8"; T_BG_DARK="#12070c"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#22101a"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(34,16,26,0.35)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(18,7,12,0.8)"
+      T_GLASS_LIGHT="rgba(215,10,83,0.12)"; T_GLASS_DARK="rgba(30,12,20,0.4)"
+      T_GLASS_BORDER_LIGHT="rgba(215,10,83,0.18)"; T_GLASS_BORDER_DARK="rgba(255,255,255,0.08)"
+      T_TEXT_LIGHT="#2b0d18"; T_TEXT_DARK="#f3d9e2"
+      T_MUTED_LIGHT="#6b4b57"; T_MUTED_DARK="#b8909e"
+      T_BORDER_LIGHT="#f1dfe6"; T_BORDER_DARK="rgba(120,60,80,0.5)"
+      T_STAT_A_LIGHT="#D70A53"; T_STAT_B_LIGHT="#F2B8C4"
+      T_STAT_A_DARK="#f4a0b8"; T_STAT_B_DARK="#e06d94"
+      ;;
+    santa-cruz)
+      T_PRIMARY="#00A651"; T_SECONDARY="#0B6E4F"; T_ACCENT="#7DD3A8"
+      T_PRIMARY_LIGHT="#7dd3a8"; T_PRIMARY_DARK="#007337"; T_PRIMARY_RGB="0,166,81"
+      T_BG_LIGHT="#f3faf5"; T_BG_DARK="#0c1f14"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#14291c"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(20,41,28,0.35)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(12,31,20,0.8)"
+      T_GLASS_LIGHT="rgba(0,166,81,0.12)"; T_GLASS_DARK="rgba(0,60,30,0.4)"
+      T_GLASS_BORDER_LIGHT="rgba(0,166,81,0.18)"; T_GLASS_BORDER_DARK="rgba(255,255,255,0.08)"
+      T_TEXT_LIGHT="#0d2b1a"; T_TEXT_DARK="#d8f5e3"
+      T_MUTED_LIGHT="#47715a"; T_MUTED_DARK="#93bfa5"
+      T_BORDER_LIGHT="#d8f0e0"; T_BORDER_DARK="rgba(80,140,105,0.5)"
+      T_STAT_A_LIGHT="#00A651"; T_STAT_B_LIGHT="#7DD3A8"
+      T_STAT_A_DARK="#7dd3a8"; T_STAT_B_DARK="#00a651"
+      ;;
+    terminal)
+      T_PRIMARY="#33FFA5"; T_SECONDARY="#26C281"; T_ACCENT="#70FFD0"
+      T_PRIMARY_LIGHT="#70ffd0"; T_PRIMARY_DARK="#10a86a"; T_PRIMARY_RGB="51,255,165"
+      T_BG_LIGHT="#e9f7ef"; T_BG_DARK="#0a0f0a"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#101810"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(16,24,16,0.4)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(10,15,10,0.85)"
+      T_GLASS_LIGHT="rgba(38,194,129,0.12)"; T_GLASS_DARK="rgba(20,50,30,0.4)"
+      T_GLASS_BORDER_LIGHT="rgba(38,194,129,0.2)"; T_GLASS_BORDER_DARK="rgba(51,255,165,0.15)"
+      T_TEXT_LIGHT="#0b1f14"; T_TEXT_DARK="#c9f7e0"
+      T_MUTED_LIGHT="#3f7a5c"; T_MUTED_DARK="#6fae8d"
+      T_BORDER_LIGHT="#d4efe0"; T_BORDER_DARK="rgba(80,180,130,0.4)"
+      T_STAT_A_LIGHT="#26C281"; T_STAT_B_LIGHT="#33FFA5"
+      T_STAT_A_DARK="#33ffa5"; T_STAT_B_DARK="#26c281"
+      ;;
+    midnight)
+      T_PRIMARY="#6366f1"; T_SECONDARY="#8b5cf6"; T_ACCENT="#a5b4fc"
+      T_PRIMARY_LIGHT="#a5b4fc"; T_PRIMARY_DARK="#4338ca"; T_PRIMARY_RGB="99,102,241"
+      T_BG_LIGHT="#f4f5fd"; T_BG_DARK="#0f172a"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#1e293b"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(30,41,59,0.4)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(15,23,42,0.85)"
+      T_GLASS_LIGHT="rgba(99,102,241,0.12)"; T_GLASS_DARK="rgba(70,70,160,0.35)"
+      T_GLASS_BORDER_LIGHT="rgba(99,102,241,0.18)"; T_GLASS_BORDER_DARK="rgba(255,255,255,0.08)"
+      T_TEXT_LIGHT="#141c3a"; T_TEXT_DARK="#e2e8f0"
+      T_MUTED_LIGHT="#4c5682"; T_MUTED_DARK="#94a3b8"
+      T_BORDER_LIGHT="#e3e6f5"; T_BORDER_DARK="rgba(100,116,139,0.5)"
+      T_STAT_A_LIGHT="#6366f1"; T_STAT_B_LIGHT="#a5b4fc"
+      T_STAT_A_DARK="#a5b4fc"; T_STAT_B_DARK="#818cf8"
+      ;;
+    nord)
+      T_PRIMARY="#5E81AC"; T_SECONDARY="#88C0D0"; T_ACCENT="#81A1C1"
+      T_PRIMARY_LIGHT="#81a1c1"; T_PRIMARY_DARK="#3d5a80"; T_PRIMARY_RGB="94,129,172"
+      T_BG_LIGHT="#eceff4"; T_BG_DARK="#2e3440"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#3b4252"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(46,52,64,0.4)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(46,52,64,0.85)"
+      T_GLASS_LIGHT="rgba(94,129,172,0.12)"; T_GLASS_DARK="rgba(100,130,170,0.2)"
+      T_GLASS_BORDER_LIGHT="rgba(94,129,172,0.18)"; T_GLASS_BORDER_DARK="rgba(255,255,255,0.08)"
+      T_TEXT_LIGHT="#2e3440"; T_TEXT_DARK="#eceff4"
+      T_MUTED_LIGHT="#5a6478"; T_MUTED_DARK="#d8dee9"
+      T_BORDER_LIGHT="#d8dee9"; T_BORDER_DARK="rgba(120,135,160,0.4)"
+      T_STAT_A_LIGHT="#5E81AC"; T_STAT_B_LIGHT="#88C0D0"
+      T_STAT_A_DARK="#88c0d0"; T_STAT_B_DARK="#5e81ac"
+      ;;
+    dracula)
+      T_PRIMARY="#FF79C6"; T_SECONDARY="#BD93F9"; T_ACCENT="#8BE9FD"
+      T_PRIMARY_LIGHT="#ffb3de"; T_PRIMARY_DARK="#cc4da0"; T_PRIMARY_RGB="255,121,198"
+      T_BG_LIGHT="#f8f2f7"; T_BG_DARK="#282a36"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#343746"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(40,42,54,0.4)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(40,42,54,0.85)"
+      T_GLASS_LIGHT="rgba(255,121,198,0.12)"; T_GLASS_DARK="rgba(120,80,120,0.35)"
+      T_GLASS_BORDER_LIGHT="rgba(255,121,198,0.18)"; T_GLASS_BORDER_DARK="rgba(255,255,255,0.08)"
+      T_TEXT_LIGHT="#2d2430"; T_TEXT_DARK="#f8f8f2"
+      T_MUTED_LIGHT="#6e5a6b"; T_MUTED_DARK="#bd93f9"
+      T_BORDER_LIGHT="#f0e2ee"; T_BORDER_DARK="rgba(150,110,140,0.4)"
+      T_STAT_A_LIGHT="#BD93F9"; T_STAT_B_LIGHT="#FF79C6"
+      T_STAT_A_DARK="#ff79c6"; T_STAT_B_DARK="#8be9fd"
+      ;;
+    catppuccin)
+      T_PRIMARY="#F5C2E7"; T_SECONDARY="#89B4FA"; T_ACCENT="#CBA6F7"
+      T_PRIMARY_LIGHT="#f5c2e7"; T_PRIMARY_DARK="#b56ba0"; T_PRIMARY_RGB="245,194,231"
+      T_BG_LIGHT="#f7f4fa"; T_BG_DARK="#1e1e2e"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#313244"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(30,30,46,0.4)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(30,30,46,0.85)"
+      T_GLASS_LIGHT="rgba(203,166,247,0.12)"; T_GLASS_DARK="rgba(120,110,170,0.3)"
+      T_GLASS_BORDER_LIGHT="rgba(203,166,247,0.18)"; T_GLASS_BORDER_DARK="rgba(255,255,255,0.08)"
+      T_TEXT_LIGHT="#2a2333"; T_TEXT_DARK="#cdd6f4"
+      T_MUTED_LIGHT="#6b6476"; T_MUTED_DARK="#a6adc8"
+      T_BORDER_LIGHT="#efe8f4"; T_BORDER_DARK="rgba(140,150,190,0.4)"
+      T_STAT_A_LIGHT="#89B4FA"; T_STAT_B_LIGHT="#CBA6F7"
+      T_STAT_A_DARK="#f5c2e7"; T_STAT_B_DARK="#89b4fa"
+      ;;
+    gruvbox)
+      T_PRIMARY="#FE8019"; T_SECONDARY="#B8BB26"; T_ACCENT="#FB4934"
+      T_PRIMARY_LIGHT="#fea65c"; T_PRIMARY_DARK="#c05f0a"; T_PRIMARY_RGB="254,128,25"
+      T_BG_LIGHT="#fbf3e7"; T_BG_DARK="#282828"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#3c3836"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(40,40,40,0.4)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(40,40,40,0.85)"
+      T_GLASS_LIGHT="rgba(254,128,25,0.12)"; T_GLASS_DARK="rgba(120,90,40,0.3)"
+      T_GLASS_BORDER_LIGHT="rgba(254,128,25,0.18)"; T_GLASS_BORDER_DARK="rgba(255,255,255,0.08)"
+      T_TEXT_LIGHT="#3c3528"; T_TEXT_DARK="#ebdbb2"
+      T_MUTED_LIGHT="#7a715e"; T_MUTED_DARK="#a89984"
+      T_BORDER_LIGHT="#eee2cc"; T_BORDER_DARK="rgba(150,130,100,0.4)"
+      T_STAT_A_LIGHT="#FE8019"; T_STAT_B_LIGHT="#B8BB26"
+      T_STAT_A_DARK="#fe8019"; T_STAT_B_DARK="#d8a657"
+      ;;
+    ubuntu)
+      T_PRIMARY="#E95420"; T_SECONDARY="#772953"; T_ACCENT="#FF9A6A"
+      T_PRIMARY_LIGHT="#ff9a6a"; T_PRIMARY_DARK="#b33a10"; T_PRIMARY_RGB="233,84,32"
+      T_BG_LIGHT="#faf5f3"; T_BG_DARK="#300A24"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#3d1430"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(61,20,48,0.4)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(48,10,36,0.85)"
+      T_GLASS_LIGHT="rgba(233,84,32,0.12)"; T_GLASS_DARK="rgba(160,50,60,0.3)"
+      T_GLASS_BORDER_LIGHT="rgba(233,84,32,0.18)"; T_GLASS_BORDER_DARK="rgba(255,255,255,0.08)"
+      T_TEXT_LIGHT="#341b10"; T_TEXT_DARK="#f7d9cc"
+      T_MUTED_LIGHT="#7c5640"; T_MUTED_DARK="#c99a86"
+      T_BORDER_LIGHT="#f2e0d8"; T_BORDER_DARK="rgba(200,120,100,0.4)"
+      T_STAT_A_LIGHT="#E95420"; T_STAT_B_LIGHT="#FF9A6A"
+      T_STAT_A_DARK="#ff9a6a"; T_STAT_B_DARK="#e95420"
+      ;;
+    mint)
+      T_PRIMARY="#87CF3E"; T_SECONDARY="#4B7A2E"; T_ACCENT="#C0F08B"
+      T_PRIMARY_LIGHT="#c0f08b"; T_PRIMARY_DARK="#5a9423"; T_PRIMARY_RGB="135,207,62"
+      T_BG_LIGHT="#f4faf0"; T_BG_DARK="#1e2b1e"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#2a3a2a"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(30,43,30,0.4)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(30,43,30,0.85)"
+      T_GLASS_LIGHT="rgba(135,207,62,0.12)"; T_GLASS_DARK="rgba(90,140,50,0.25)"
+      T_GLASS_BORDER_LIGHT="rgba(135,207,62,0.18)"; T_GLASS_BORDER_DARK="rgba(255,255,255,0.08)"
+      T_TEXT_LIGHT="#23301c"; T_TEXT_DARK="#e6f5dd"
+      T_MUTED_LIGHT="#5d704f"; T_MUTED_DARK="#a9c49a"
+      T_BORDER_LIGHT="#e3f0da"; T_BORDER_DARK="rgba(120,170,100,0.4)"
+      T_STAT_A_LIGHT="#4B7A2E"; T_STAT_B_LIGHT="#87CF3E"
+      T_STAT_A_DARK="#c0f08b"; T_STAT_B_DARK="#87cf3e"
+      ;;
+    solarized)
+      T_PRIMARY="#268BD2"; T_SECONDARY="#D33682"; T_ACCENT="#2AA198"
+      T_PRIMARY_LIGHT="#58a6e0"; T_PRIMARY_DARK="#175f8c"; T_PRIMARY_RGB="38,139,210"
+      T_BG_LIGHT="#fdf6e3"; T_BG_DARK="#002b36"
+      T_SURFACE_LIGHT="#ffffff"; T_SURFACE_DARK="#073642"
+      T_SURFACE_ALT_LIGHT="rgba(255,255,255,0.55)"; T_SURFACE_ALT_DARK="rgba(7,54,66,0.4)"
+      T_NAV_LIGHT="rgba(255,255,255,0.8)"; T_NAV_DARK="rgba(0,43,54,0.85)"
+      T_GLASS_LIGHT="rgba(38,139,210,0.12)"; T_GLASS_DARK="rgba(60,120,140,0.25)"
+      T_GLASS_BORDER_LIGHT="rgba(38,139,210,0.18)"; T_GLASS_BORDER_DARK="rgba(255,255,255,0.08)"
+      T_TEXT_LIGHT="#2b3b41"; T_TEXT_DARK="#93a1a1"
+      T_MUTED_LIGHT="#657b83"; T_MUTED_DARK="#839496"
+      T_BORDER_LIGHT="#e5ddc8"; T_BORDER_DARK="rgba(120,150,150,0.3)"
+      T_STAT_A_LIGHT="#268BD2"; T_STAT_B_LIGHT="#2AA198"
+      T_STAT_A_DARK="#2aa198"; T_STAT_B_DARK="#268bd2"
+      ;;
+    *)
+      echo "  [ERROR] Tema desconocido: '$THEME'. Usando 'default'." >&2
+      THEME="default"
+      themes_define
+      return
+      ;;
+  esac
+}
+
+# ============================================================
 # GENERAR: Estilos CSS
 # ============================================================
 generar_css() {
-  echo "  Generando CSS..."
+  echo "  Generando CSS... (tema: $THEME)"
+  themes_define
   cat > "$OUTPUT_DIR/css/style.css" << CSSEOF
+/* ============================================================
+   PALETA DE COLOR - Tema: $THEME
+   (Las variables se resuelven en tiempo de generacion)
+   ============================================================ */
 :root {
-  --color-primary: $COLOR_PRIMARIO;
-  --color-secondary: $COLOR_SECUNDARIO;
-  --color-accent: $COLOR_ACENTO;
-  --color-primary-light: #f4a0b8;
-  --color-primary-dark: #a0083e;
-  --color-bg-light: #fafafa;
-  --color-bg-dark: #1a1a2e;
+  --color-primary: $T_PRIMARY;
+  --color-secondary: $T_SECONDARY;
+  --color-accent: $T_ACCENT;
+  --color-primary-light: $T_PRIMARY_LIGHT;
+  --color-primary-dark: $T_PRIMARY_DARK;
+  --color-primary-rgb: $T_PRIMARY_RGB;
   --color-text-secondary: $TEXT_SECONDARY_COLOR;
-  --glass-bg: rgba(255, 255, 255, 0.15);
-  --glass-border: rgba(255, 255, 255, 0.2);
+
+  --color-bg: $T_BG_LIGHT;
+  --color-surface: $T_SURFACE_LIGHT;
+  --color-surface-alt: $T_SURFACE_ALT_LIGHT;
+  --color-navbar: $T_NAV_LIGHT;
+  --color-text: $T_TEXT_LIGHT;
+  --color-text-muted: $T_MUTED_LIGHT;
+  --color-border: $T_BORDER_LIGHT;
+  --color-stat-a: $T_STAT_A_LIGHT;
+  --color-stat-b: $T_STAT_B_LIGHT;
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-danger: #dc2626;
+
+  --glass-bg: $T_GLASS_LIGHT;
+  --glass-border: $T_GLASS_BORDER_LIGHT;
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --color-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --color-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
+.dark {
+  --color-bg: $T_BG_DARK;
+  --color-surface: $T_SURFACE_DARK;
+  --color-surface-alt: $T_SURFACE_ALT_DARK;
+  --color-navbar: $T_NAV_DARK;
+  --color-text: $T_TEXT_DARK;
+  --color-text-muted: $T_MUTED_DARK;
+  --color-border: $T_BORDER_DARK;
+  --color-stat-a: $T_STAT_A_DARK;
+  --color-stat-b: $T_STAT_B_DARK;
+
+  --glass-bg: $T_GLASS_DARK;
+  --glass-border: $T_GLASS_BORDER_DARK;
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --color-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --color-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================
+   CLASES SEMANTICAS (reemplazan colores Tailwind hardcodeados)
+   ============================================================ */
+.surface { background: var(--color-surface); }
+.surface-alt { background: var(--color-surface-alt); }
+.text-body { color: var(--color-text); }
+.text-muted { color: var(--color-text-muted); }
+.border-soft { border-color: var(--color-border); }
+
+.gradient-fade-r {
+  background: linear-gradient(to right, transparent, var(--color-text-muted));
+}
+.gradient-fade-l {
+  background: linear-gradient(to left, transparent, var(--color-text-muted));
+}
+
+/* Iconos de informacion uniformes */
+.icon-box {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  background: rgba(var(--color-primary-rgb), 0.12);
+  color: var(--color-primary);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.icon-box:hover {
+  background: rgba(var(--color-primary-rgb), 0.2);
+  transform: scale(1.06);
+}
+
+/* Icono Lucide renderizado: mismo tamano/grosor/estilo en todas partes.
+   Cubre el SVG generado por lucide independientemente de como copie las
+   clases del elemento <i> original. */
+.icon-box svg,
+.icon-box .lucide {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: inherit;
+  stroke-width: 2;
+}
+
+.icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: inherit;
+  stroke-width: 2;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
 .debian-watermark {
   position: fixed;
   inset: 0;
@@ -583,6 +882,9 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .glass {
@@ -591,11 +893,6 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   box-shadow: var(--glass-shadow);
-}
-
-.dark .glass {
-  --glass-bg: rgba(30, 30, 60, 0.4);
-  --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 /* Hero */
@@ -640,7 +937,7 @@ body {
 .shape-blob:nth-child(2) {
   width: 350px;
   height: 350px;
-  background: #a0c4e8;
+  background: var(--color-accent);
   bottom: -5%;
   left: -8%;
   animation-delay: -5s;
@@ -649,7 +946,7 @@ body {
 .shape-blob:nth-child(3) {
   width: 250px;
   height: 250px;
-  background: #c5a8e2;
+  background: var(--color-secondary);
   top: 40%;
   left: 50%;
   animation-delay: -10s;
@@ -769,14 +1066,7 @@ body {
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.dark .stat-number {
-  background: linear-gradient(135deg, #f4a0b8, #a0c4e8);
+  background: linear-gradient(135deg, var(--color-stat-a), var(--color-stat-b));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -800,8 +1090,8 @@ body {
   justify-content: center;
   padding: 1.5rem;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   transition: all 0.3s ease;
   height: 120px;
 }
@@ -820,11 +1110,6 @@ body {
 
 .sponsor-item:hover img { filter: grayscale(0); }
 
-.dark .sponsor-item {
-  background: rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.05);
-}
-
 /* Section titles */
 .section-title {
   font-size: 2.5rem;
@@ -837,24 +1122,17 @@ body {
 
 .section-subtitle {
   font-size: 1.125rem;
-  color: #666;
+  color: var(--color-text-muted);
   max-width: 600px;
   margin: 0 auto;
 }
-
-.dark .section-subtitle { color: #aaa; }
 
 /* Navbar */
 .navbar-blur {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.dark .navbar-blur {
-  background: rgba(26, 26, 46, 0.8);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--color-navbar);
+  border-bottom: 1px solid var(--color-border);
 }
 
 /* Poster image */
@@ -873,13 +1151,49 @@ body {
   box-shadow: 0 8px 40px rgba(0,0,0,0.18);
 }
 
-/* Codename (Toy Story style) */
+/* Codename (Toy Story style) - bandera de Santa Cruz: franjas horizontales
+   verde-blanco-verde. El degradado usa background-size en "em" para adaptarse
+   al tamano de la fuente (independiente de la longitud del texto, responsive
+   y zoom). La bandera de Santa Cruz tiene las franjas HORIZONTALES: el
+   degradado debe ir de arriba hacia abajo (to bottom).
+
+   Las franjas no son 0/33.3/66.7 porque el area visible de los glifos no
+   ocupa todo el em (queda espacio debajo de la linea base): con esa division
+   la franja verde inferior quedaba casi fuera del texto y se veia solo
+   verde-blanco. Con cortes en 25% y 47.5% (verificado en Chrome a varios
+   tamanos de fuente y line-height) las tres franjas caen dentro del area
+   visible del texto y quedan visualmente equilibradas. */
 .codename {
   font-family: 'Luckiest Guy', 'Comic Sans MS', 'Chalkboard SE', cursive;
   font-weight: 400;
   letter-spacing: 0.02em;
-  color: var(--color-accent);
   display: inline;
+  color: #007A33;
+  background-image: linear-gradient(
+    to bottom,
+    #007A33 0%,
+    #007A33 25%,
+    #ffffff 25%,
+    #ffffff 47.5%,
+    #007A33 47.5%,
+    #007A33 100%
+  );
+  background-size: 100% 1em;
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .codename {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.codename-block {
+  display: block;
+  margin-top: 0.08em;
 }
 
 /* Section dividers */
@@ -920,18 +1234,18 @@ body {
 }
 
 .dark .leaflet-control-zoom a {
-  background: #2a2a3e;
-  color: #ccc;
-  border-color: #444;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
 }
 
 .dark .leaflet-control-attribution {
-  background: rgba(30, 30, 50, 0.8) !important;
-  color: #999;
+  background: var(--color-surface-alt) !important;
+  color: var(--color-text-muted);
 }
 
 .dark .leaflet-control-attribution a {
-  color: #aaa;
+  color: var(--color-text-muted);
 }
 
 /* Social buttons */
@@ -943,10 +1257,8 @@ body {
   height: 40px;
   border-radius: 50%;
   transition: all 0.3s ease;
-  color: #666;
+  color: var(--color-text-muted);
 }
-
-.dark .social-btn { color: #aaa; }
 
 .social-btn:hover {
   background: var(--color-primary-light);
@@ -1038,9 +1350,9 @@ section { position: relative; }
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(215, 10, 83, 0.4); }
-  70% { box-shadow: 0 0 0 12px rgba(215, 10, 83, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(215, 10, 83, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb), 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(var(--color-primary-rgb), 0); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb), 0); }
 }
 
 /* AOS refinements */
@@ -1064,8 +1376,13 @@ generar_js() {
   'use strict';
 
   var DATA = window.DEBIANDAY_DATA || {};
-  var I = DATA.icons || {};
-  function icn(name) { return 'data-lucide="' + (I[name] || name) + '"'; }
+  var I = (DATA.event && DATA.event.icons) || {};
+  function icn(name) {
+    if (typeof window.DEBIANDAY_ICONS !== 'undefined' && window.DEBIANDAY_ICONS.icn) {
+      return window.DEBIANDAY_ICONS.icn(name);
+    }
+    return 'data-lucide="' + (I[name] || name) + '"';
+  }
 
   // ============================================================
   // RENDER: Section builders
@@ -1084,16 +1401,16 @@ generar_js() {
       + '</div>'
       + '<h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight leading-[1.05] mb-6">'
       + '<span class="text-[var(--color-primary)]">Debian</span> <span class="text-[var(--color-secondary)]">Day</span>'
-      + '<span class="codename"> ' + e.hero.codename + '</span>'
+      + '<span class="codename codename-block">' + e.hero.codename + '</span>'
       + '</h1>'
-      + '<p class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">' + e.hero.description + '</p>'
+      + '<p class="text-lg sm:text-xl md:text-2xl text-muted max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">' + e.hero.description + '</p>'
       + '<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">'
       + '<a href="' + e.registerUrl + '" target="_blank" rel="noopener noreferrer" class="btn btn-lg rounded-full border-none text-white shadow-lg hover:shadow-xl transition-all duration-300" style="background:var(--color-primary);" data-aos="fade-up" data-aos-delay="200">'
       + '<i ' + icn('ticket') + ' class="w-5 h-5 mr-2"></i>' + e.hero.buttonRegister + '</a>'
       + '<a href="#schedule" class="btn btn-lg rounded-full btn-outline btn-pulse shadow-lg hover:shadow-xl transition-all duration-300" style="border-color:var(--color-primary);color:var(--color-primary);" data-aos="fade-up" data-aos-delay="300">'
       + '<i ' + icn('calendar') + ' class="w-5 h-5 mr-2"></i>' + e.hero.buttonSchedule + '</a>'
       + '</div>'
-      + '<div class="flex items-center gap-6 mt-10 justify-center lg:justify-start text-sm text-gray-500 dark:text-gray-300" data-aos="fade-up" data-aos-delay="400">'
+      + '<div class="flex items-center gap-6 mt-10 justify-center lg:justify-start text-sm text-muted" data-aos="fade-up" data-aos-delay="400">'
       + '<span class="flex items-center gap-2"><i ' + icn('location') + ' class="w-4 h-4"></i> ' + e.venue + ', ' + e.city + '</span>'
       + '<span class="flex items-center gap-2"><i ' + icn('clock') + ' class="w-4 h-4"></i> ' + e.time + '</span>'
       + '</div></div>'
@@ -1105,32 +1422,28 @@ generar_js() {
 
   function renderInformation(d) {
     var e = d.event;
-    return '<section id="information" class="section-padding bg-white/50 dark:bg-gray-900/30" aria-label="Informacion del evento">'
+    return '<section id="information" class="section-padding surface-alt" aria-label="Informacion del evento">'
       + '<div class="container mx-auto max-w-6xl">'
       + '<div class="text-center mb-16" data-aos="fade-up">'
       + '<h2 class="section-title mb-4">' + e.information.title + '</h2>'
       + '<p class="section-subtitle">' + e.information.description + '</p></div>'
       + '<div class="card-grid card-grid-4">'
-      + '<div class="card bg-white dark:bg-gray-800/60 shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8 border border-gray-100 dark:border-gray-700/50" data-aos="fade-up" data-aos-delay="0">'
-      + '<div class="w-14 h-14 rounded-2xl bg-[var(--color-primary-light)]/20 flex items-center justify-center mb-5">'
-      + '<i ' + icn('target') + ' class="w-7 h-7 text-[var(--color-primary)]"></i></div>'
+      + '<div class="card surface shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8 border border-soft" data-aos="fade-up" data-aos-delay="0">'
+      + '<div class="icon-box"><i ' + icn('target') + ' class="icon"></i></div>'
       + '<h3 class="text-xl font-bold mb-3">Objetivos</h3>'
-      + '<p class="text-gray-600 dark:text-gray-300 leading-relaxed">' + e.information.objectives + '</p></div>'
-      + '<div class="card bg-white dark:bg-gray-800/60 shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8 border border-gray-100 dark:border-gray-700/50" data-aos="fade-up" data-aos-delay="100">'
-      + '<div class="w-14 h-14 rounded-2xl bg-[var(--color-accent)]/20 flex items-center justify-center mb-5">'
-      + '<i ' + icn('users') + ' class="w-7 h-7 text-[var(--color-accent)]"></i></div>'
+      + '<p class="text-muted leading-relaxed">' + e.information.objectives + '</p></div>'
+      + '<div class="card surface shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8 border border-soft" data-aos="fade-up" data-aos-delay="100">'
+      + '<div class="icon-box"><i ' + icn('users') + ' class="icon"></i></div>'
       + '<h3 class="text-xl font-bold mb-3">Publico</h3>'
-      + '<p class="text-gray-600 dark:text-gray-300 leading-relaxed">' + e.information.audience + '</p></div>'
-      + '<div class="card bg-white dark:bg-gray-800/60 shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8 border border-gray-100 dark:border-gray-700/50" data-aos="fade-up" data-aos-delay="200">'
-      + '<div class="w-14 h-14 rounded-2xl bg-[#a0c4e8]/20 flex items-center justify-center mb-5">'
-      + '<i ' + icn('heart') + ' class="w-7 h-7 text-[#2B5797]"></i></div>'
+      + '<p class="text-muted leading-relaxed">' + e.information.audience + '</p></div>'
+      + '<div class="card surface shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8 border border-soft" data-aos="fade-up" data-aos-delay="200">'
+      + '<div class="icon-box"><i ' + icn('heart') + ' class="icon"></i></div>'
       + '<h3 class="text-xl font-bold mb-3">Organiza</h3>'
-      + '<p class="text-gray-600 dark:text-gray-300 leading-relaxed">' + e.information.organizer + '</p></div>'
-      + '<div class="card bg-white dark:bg-gray-800/60 shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8 border border-gray-100 dark:border-gray-700/50" data-aos="fade-up" data-aos-delay="300">'
-      + '<div class="w-14 h-14 rounded-2xl bg-[#c5a8e2]/20 flex items-center justify-center mb-5">'
-      + '<i ' + icn('location') + ' class="w-7 h-7 text-[#7c3aed]"></i></div>'
+      + '<p class="text-muted leading-relaxed">' + e.information.organizer + '</p></div>'
+      + '<div class="card surface shadow-sm hover:shadow-md transition-all duration-300 rounded-2xl p-8 border border-soft" data-aos="fade-up" data-aos-delay="300">'
+      + '<div class="icon-box"><i ' + icn('location') + ' class="icon"></i></div>'
       + '<h3 class="text-xl font-bold mb-3">Ubicacion</h3>'
-      + '<p class="text-gray-600 dark:text-gray-300 leading-relaxed">' + e.venue + ', ' + e.city + ', ' + e.country + '</p></div>'
+      + '<p class="text-muted leading-relaxed">' + e.venue + ', ' + e.city + ', ' + e.country + '</p></div>'
       + '</div></div></section>';
   }
 
@@ -1144,7 +1457,7 @@ generar_js() {
       { label: 'Participantes', target: s.participants }
     ];
     var html = '<section id="statistics" class="section-padding relative overflow-hidden" aria-label="Estadisticas del evento">'
-      + '<div class="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-light)]/5 to-[#a0c4e8]/5" aria-hidden="true"></div>'
+      + '<div class="absolute inset-0 bg-gradient-to-br from-[var(--color-primary-light)]/5 to-[var(--color-accent)]/5" aria-hidden="true"></div>'
       + '<div class="container mx-auto max-w-6xl">'
       + '<div class="text-center mb-12" data-aos="fade-up">'
       + '<h2 class="section-title mb-4">En numeros</h2>'
@@ -1153,7 +1466,7 @@ generar_js() {
     for (var i = 0; i < items.length; i++) {
       html += '<div class="stat-item" data-aos="zoom-in" data-aos-delay="' + (i * 100) + '">'
         + '<div class="stat-number" data-target="' + items[i].target + '">0</div>'
-        + '<div class="text-gray-500 dark:text-gray-300 mt-2 font-medium text-xs sm:text-sm">' + items[i].label + '</div></div>';
+        + '<div class="text-muted mt-2 font-medium text-xs sm:text-sm">' + items[i].label + '</div></div>';
     }
     html += '</div></div></section>';
     return html;
@@ -1162,7 +1475,7 @@ generar_js() {
   function renderSpeakers(d) {
     var list = d.speakers;
     if (!list || !list.length) return '';
-    var html = '<section id="speakers" class="section-padding bg-white/50 dark:bg-gray-900/30" aria-label="Ponentes">'
+    var html = '<section id="speakers" class="section-padding surface-alt" aria-label="Ponentes">'
       + '<div class="container mx-auto max-w-6xl">'
       + '<div class="text-center mb-16" data-aos="fade-up">'
       + '<h2 class="section-title mb-4">Ponentes</h2>'
@@ -1176,13 +1489,13 @@ generar_js() {
       if (sp.linkedin) social += '<a href="' + sp.linkedin + '" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn de ' + sp.name + '"><i ' + icn('linkedin') + ' class="w-4 h-4"></i></a>';
       if (sp.web) social += '<a href="' + sp.web + '" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Web de ' + sp.name + '"><i ' + icn('globe') + ' class="w-4 h-4"></i></a>';
       var company = sp.company ? '<span class="text-[var(--color-primary)] font-medium">@ ' + sp.company + '</span>' : '';
-      html += '<div class="speaker-card bg-white dark:bg-gray-800/60 rounded-2xl p-8 border border-gray-100 dark:border-gray-700/50 shadow-sm hover:shadow-lg" data-aos="fade-up" data-aos-delay="' + (i * 50) + '">'
+      html += '<div class="speaker-card surface rounded-2xl p-8 border border-soft shadow-sm hover:shadow-lg" data-aos="fade-up" data-aos-delay="' + (i * 50) + '">'
         + '<div class="flex flex-col items-center text-center">'
         + '<img src="' + sp.photo + '" alt="' + sp.name + '" class="speaker-img mb-5" loading="lazy">'
         + '<h3 class="text-xl font-bold mb-1">' + sp.name + '</h3>'
-        + '<p class="text-gray-500 dark:text-gray-300 text-sm mb-1">' + sp.role + '</p>'
+        + '<p class="text-muted text-sm mb-1">' + sp.role + '</p>'
         + company
-        + '<p class="text-gray-500 dark:text-gray-300 text-sm mt-4 leading-relaxed">' + sp.bio + '</p>'
+        + '<p class="text-muted text-sm mt-4 leading-relaxed">' + sp.bio + '</p>'
         + '<div class="flex gap-2 mt-5">' + social + '</div></div></div>';
     }
     html += '</div></div></section>';
@@ -1197,22 +1510,22 @@ generar_js() {
       + '<div class="text-center mb-16" data-aos="fade-up">'
       + '<h2 class="section-title mb-4">Cronograma</h2>'
       + '<p class="section-subtitle">Agenda completa del evento</p>'
-      + '<p class="text-sm text-gray-500 dark:text-gray-300 mt-2">' + d.event.date + ' \u2014 ' + d.event.venue + ', ' + d.event.city + '</p></div>'
+      + '<p class="text-sm text-muted mt-2">' + d.event.date + ' \u2014 ' + d.event.venue + ', ' + d.event.city + '</p></div>'
       + '<div class="schedule-list">';
     for (var i = 0; i < list.length; i++) {
       var sl = list[i];
       var color = sl.color || '#E8A0B0';
-      html += '<div class="schedule-card bg-white dark:bg-gray-800/60 border border-gray-100 dark:border-gray-700/50 shadow-sm hover:shadow-md" data-aos="fade-up" data-aos-delay="' + (i * 50) + '">'
+      html += '<div class="schedule-card surface border border-soft shadow-sm hover:shadow-md" data-aos="fade-up" data-aos-delay="' + (i * 50) + '">'
         + '<div class="schedule-card-header">'
         + '<span class="schedule-time">' + sl.start + ' \u2013 ' + sl.end + '</span>'
         + '<span class="schedule-type" style="background:' + color + ';">' + sl.type + '</span>'
         + '</div>'
         + '<h3 class="text-lg font-bold mb-1 leading-snug">' + sl.title + '</h3>'
-        + '<p class="text-sm text-gray-500 dark:text-gray-300 flex items-center gap-2 flex-wrap">'
+        + '<p class="text-sm text-muted flex items-center gap-2 flex-wrap">'
         + '<span class="flex items-center gap-1"><svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>' + sl.speaker + '</span>'
-        + '<span class="text-gray-300 dark:text-gray-600 hidden sm:inline">|</span>'
+        + '<span class="text-muted hidden sm:inline">|</span>'
         + '<span class="flex items-center gap-1"><svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>' + sl.location + '</span></p>'
-        + '<p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed mt-2">' + sl.description + '</p></div>';
+        + '<p class="text-sm text-muted leading-relaxed mt-2">' + sl.description + '</p></div>';
     }
     html += '</div></div></section>';
     return html;
@@ -1236,12 +1549,12 @@ generar_js() {
       }
       catHtml += '<div class="mb-12" data-aos="fade-up">'
         + '<div class="flex items-center justify-center gap-4 mb-8">'
-        + '<span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300 dark:to-gray-600"></span>'
+        + '<span class="h-px flex-1 gradient-fade-r opacity-40"></span>'
         + '<span class="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider ' + badgeClass + '">' + cat + '</span>'
-        + '<span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300 dark:to-gray-600"></span></div>'
+        + '<span class="h-px flex-1 gradient-fade-l opacity-40"></span></div>'
         + '<div class="sponsor-grid ' + gridClass + '">' + catItems + '</div></div>';
     }
-    return '<section id="sponsors" class="section-padding bg-white/50 dark:bg-gray-900/30" aria-label="Patrocinadores">'
+    return '<section id="sponsors" class="section-padding surface-alt" aria-label="Patrocinadores">'
       + '<div class="container mx-auto max-w-5xl">'
       + '<div class="text-center mb-16" data-aos="fade-up">'
       + '<h2 class="section-title mb-4">Patrocinadores</h2>'
@@ -1260,10 +1573,10 @@ generar_js() {
       + '<div class="space-y-4">';
     for (var i = 0; i < list.length; i++) {
       var checked = i === 0 ? 'checked' : '';
-      html += '<div class="collapse collapse-arrow bg-white dark:bg-gray-800/60 border border-gray-100 dark:border-gray-700/50 rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="' + (i * 50) + '">'
+      html += '<div class="collapse collapse-arrow surface border border-soft rounded-xl shadow-sm" data-aos="fade-up" data-aos-delay="' + (i * 50) + '">'
         + '<input type="radio" name="faq-accordion" id="faq-' + i + '" ' + checked + ' />'
         + '<label for="faq-' + i + '" class="collapse-title text-lg font-semibold cursor-pointer">' + list[i].question + '</label>'
-        + '<div class="collapse-content"><p class="text-gray-600 dark:text-gray-300 leading-relaxed">' + list[i].answer + '</p></div></div>';
+        + '<div class="collapse-content"><p class="text-muted leading-relaxed">' + list[i].answer + '</p></div></div>';
     }
     html += '</div></div></section>';
     return html;
@@ -1277,7 +1590,7 @@ generar_js() {
     var zoom = loc.zoom || 17;
     var lat = parseFloat(loc.latitude) || -17.775122;
     var lng = parseFloat(loc.longitude) || -63.193719;
-    var html = '<section id="location" class="section-padding bg-white/50 dark:bg-gray-900/30" aria-label="Ubicacion">'
+    var html = '<section id="location" class="section-padding surface-alt" aria-label="Ubicacion">'
       + '<div class="container mx-auto max-w-6xl">'
       + '<div class="text-center mb-16" data-aos="fade-up">'
       + '<h2 class="section-title mb-4">' + loc.title + '</h2>'
@@ -1325,21 +1638,21 @@ generar_js() {
     if (e.footer.email) contactHtml += '<li class="flex items-center gap-2"><i ' + icn('mail') + ' class="w-4 h-4"></i> <a href="mailto:' + e.footer.email + '" class="hover:text-[var(--color-primary)] transition-colors">' + e.footer.email + '</a></li>';
     if (e.venue) contactHtml += '<li class="flex items-center gap-2"><i ' + icn('location') + ' class="w-4 h-4"></i> ' + e.venue + ', ' + e.city + '</li>';
     var licenseHtml = e.footer.license ? '<span>' + e.footer.license + '</span>' : '';
-    return '<footer class="bg-gray-50 dark:bg-gray-900/80 border-t border-gray-100 dark:border-gray-800" aria-label="Pie de pagina">'
+    return '<footer class="surface-alt border-t border-soft" aria-label="Pie de pagina">'
       + '<div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16">'
       + '<div class="grid grid-cols-1 md:grid-cols-3 gap-12">'
       + '<div data-aos="fade-up" data-aos-delay="0">'
       + '<div class="flex items-center gap-3 mb-4">'
       + '<span class="text-xl font-bold"><span class="text-[var(--color-primary)]">Debian</span><span class="text-[var(--color-secondary)]">Day</span><span class="codename"> ' + d.event.hero.codename + '</span></span></div>'
-      + '<p class="text-sm text-gray-500 dark:text-gray-300 leading-relaxed">' + e.description + '</p></div>'
+      + '<p class="text-sm text-muted leading-relaxed">' + e.description + '</p></div>'
       + '<div data-aos="fade-up" data-aos-delay="100">'
-      + '<h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">Contacto</h3>'
-      + '<ul class="space-y-3 text-sm text-gray-500 dark:text-gray-300">' + contactHtml + '</ul></div>'
+      + '<h3 class="text-sm font-semibold uppercase tracking-wider text-muted mb-4">Contacto</h3>'
+      + '<ul class="space-y-3 text-sm text-muted">' + contactHtml + '</ul></div>'
       + '<div data-aos="fade-up" data-aos-delay="200">'
-      + '<h3 class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">Redes</h3>'
+      + '<h3 class="text-sm font-semibold uppercase tracking-wider text-muted mb-4">Redes</h3>'
       + '<div class="flex flex-wrap gap-2">' + socialHtml + '</div></div></div>'
       + '<div class="section-divider my-8"></div>'
-      + '<div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-400">'
+      + '<div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted">'
       + '<p>&copy; ' + e.footer.copyright + '</p>'
       + '<div class="flex items-center gap-4">' + licenseHtml + '</div></div></div></footer>';
   }
@@ -1584,6 +1897,90 @@ JSEOF
 }
 
 # ============================================================
+# GENERAR: Iconos centralizados (Lucide)
+# Unico archivo con el registro de iconos. La fuente de verdad
+# de los nombres es el bloque ICON_* en la configuracion.
+# ============================================================
+generar_icons_js() {
+  echo "  Generando js/icons.js..."
+  cat > "$OUTPUT_DIR/js/icons.js" << JSEOF
+/* ============================================================
+   Iconos centralizados - Lucide
+   Fuente unica de verdad: bloque ICON_* en generador.sh
+   Registro: nombre semantico -> nombre de icono Lucide
+   ============================================================ */
+(function (global) {
+  'use strict';
+
+  var ICONS = {
+    "calendar": "$ICON_CALENDAR",
+    "location": "$ICON_LOCATION",
+    "clock": "$ICON_CLOCK",
+    "ticket": "$ICON_TICKET",
+    "menu": "$ICON_MENU",
+    "sun": "$ICON_SUN",
+    "moon": "$ICON_MOON",
+    "github": "$ICON_GITHUB",
+    "linkedin": "$ICON_LINKEDIN",
+    "globe": "$ICON_GLOBE",
+    "at-sign": "$ICON_AT_SIGN",
+    "target": "$ICON_TARGET",
+    "users": "$ICON_USERS",
+    "heart": "$ICON_HEART",
+    "mail": "$ICON_MAIL",
+    "youtube": "$ICON_YOUTUBE",
+    "facebook": "$ICON_FACEBOOK",
+    "instagram": "$ICON_INSTAGRAM",
+    "twitter": "$ICON_TWITTER",
+    "speaker": "$ICON_SPEAKER",
+    "faq": "$ICON_FAQ",
+    "sponsor": "$ICON_SPONSOR",
+    "mastodon": "$ICON_MASTODON",
+    "telegram": "$ICON_TELEGRAM",
+    "discord": "$ICON_DISCORD",
+    "matrix": "$ICON_MATRIX",
+    "gitlab": "$ICON_GITLAB",
+    "website": "$ICON_WEBSITE"
+  };
+
+  // Icono de respaldo si un nombre no existe en la version de Lucide cargada.
+  var FALLBACK = 'circle';
+
+  // Convierte "map-pin" -> "MapPin" (los nombres en lucide.icons son PascalCase).
+  function toPascalCase(str) {
+    return String(str).replace(/(^|-)(\w)/g, function (m, p1, p2) { return p2.toUpperCase(); });
+  }
+
+  // Verifica que el nombre exista en la libreria Lucide cargada.
+  function exists(name) {
+    if (typeof lucide === 'undefined' || !lucide.icons) return true;
+    var kebab = String(name).trim();
+    return !!lucide.icons[kebab] || !!lucide.icons[toPascalCase(kebab)];
+  }
+
+  // Devuelve el atributo data-lucide con un nombre valido.
+  function icn(name) {
+    var resolved = (ICONS[name] !== undefined ? ICONS[name] : name);
+    if (!exists(resolved)) {
+      if (typeof console !== 'undefined' && console.warn) {
+        console.warn('[iconos] "' + resolved + '" no existe en Lucide; usando "' + FALLBACK + '"');
+      }
+      resolved = FALLBACK;
+    }
+    return 'data-lucide="' + resolved + '"';
+  }
+
+  global.DEBIANDAY_ICONS = {
+    icn: icn,
+    icons: ICONS,
+    exists: exists,
+    fallback: FALLBACK
+  };
+})(window);
+JSEOF
+}
+
+# ============================================================
 # GENERAR: Logo SVG
 # ============================================================
 generar_logo_svg() {
@@ -1666,21 +2063,21 @@ generar_poster() {
     cp "$src_path" "$out_path"
   else
     mkdir -p "$(dirname "$out_path")"
-    cat > "$out_path" << 'SVGEOF'
+    cat > "$out_path" << SVGEOF
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" fill="none">
-  <rect width="400" height="560" rx="24" fill="#1a1a2e"/>
-  <rect x="16" y="16" width="368" height="528" rx="16" fill="none" stroke="#D70A53" stroke-width="2" stroke-dasharray="8 4"/>
-  <text x="200" y="120" font-family="system-ui, sans-serif" font-size="32" font-weight="800" fill="#D70A53" text-anchor="middle">DebianDay</text>
-  <text x="200" y="160" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="#E8A0B0" text-anchor="middle">Forky</text>
-  <text x="200" y="220" font-family="system-ui, sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Poster del evento</text>
-  <line x1="80" y1="250" x2="320" y2="250" stroke="#2B5797" stroke-width="1"/>
-  <text x="200" y="290" font-family="system-ui, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">Agrega tu imagen personalizada</text>
-  <text x="200" y="310" font-family="system-ui, sans-serif" font-size="13" fill="#d1d5db" text-anchor="middle">en assets/img/poster.png</text>
-  <line x1="80" y1="340" x2="320" y2="340" stroke="#2B5797" stroke-width="1"/>
-  <text x="200" y="380" font-family="system-ui, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Configura POSTER_IMAGE</text>
-  <text x="200" y="400" font-family="system-ui, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">en generador.sh</text>
-  <circle cx="200" cy="480" r="40" fill="#D70A53" opacity="0.15"/>
-  <text x="200" y="490" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#D70A53" text-anchor="middle">2026</text>
+  <rect width="400" height="560" rx="24" fill="$T_BG_DARK"/>
+  <rect x="16" y="16" width="368" height="528" rx="16" fill="none" stroke="$T_PRIMARY" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="200" y="120" font-family="system-ui, sans-serif" font-size="32" font-weight="800" fill="$T_PRIMARY" text-anchor="middle">DebianDay</text>
+  <text x="200" y="160" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="$T_ACCENT" text-anchor="middle">$EVENT_CODENAME</text>
+  <text x="200" y="220" font-family="system-ui, sans-serif" font-size="14" fill="$T_MUTED_DARK" text-anchor="middle">Poster del evento</text>
+  <line x1="80" y1="250" x2="320" y2="250" stroke="$T_SECONDARY" stroke-width="1"/>
+  <text x="200" y="290" font-family="system-ui, sans-serif" font-size="13" fill="$T_TEXT_DARK" text-anchor="middle">Agrega tu imagen personalizada</text>
+  <text x="200" y="310" font-family="system-ui, sans-serif" font-size="13" fill="$T_TEXT_DARK" text-anchor="middle">en assets/img/poster.png</text>
+  <line x1="80" y1="340" x2="320" y2="340" stroke="$T_SECONDARY" stroke-width="1"/>
+  <text x="200" y="380" font-family="system-ui, sans-serif" font-size="11" fill="$T_MUTED_DARK" text-anchor="middle">Configura POSTER_IMAGE</text>
+  <text x="200" y="400" font-family="system-ui, sans-serif" font-size="11" fill="$T_MUTED_DARK" text-anchor="middle">en generador.sh</text>
+  <circle cx="200" cy="480" r="40" fill="$T_PRIMARY" opacity="0.15"/>
+  <text x="200" y="490" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="$T_PRIMARY" text-anchor="middle">2026</text>
 </svg>
 SVGEOF
   fi
@@ -1790,14 +2187,14 @@ generar_html() {
 
   cat > "$OUTPUT_DIR/index.html" << HTMLMAIN
 <!DOCTYPE html>
-<html lang="es" data-theme="$TEMA_PREDETERMINADO"$DEBIAN_BG_CLASS>
+<html lang="es" data-theme="$TEMA_PREDETERMINADO" data-palette="$THEME"$DEBIAN_BG_CLASS>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>$(json_escape "$TITULO_EVENTO")</title>
   <meta name="description" content="$(json_escape "$DESCRIPCION")">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="$COLOR_PRIMARIO">
+  <meta name="theme-color" content="$T_PRIMARY">
 
   <meta property="og:title" content="$(json_escape "$TITULO_EVENTO")">
   <meta property="og:description" content="$(json_escape "$DESCRIPCION")">
@@ -1865,7 +2262,7 @@ generar_html() {
         </div>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-soft surface">
       <ul class="menu menu-vertical p-4 gap-1">
         $NAV_ITEMS
       </ul>
@@ -1890,6 +2287,7 @@ generar_html() {
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/icons.js"></script>
   <script src="js/app.js"></script>
 
 </body>
@@ -1907,7 +2305,7 @@ validar() {
   echo "  =========================================="
   local errores=0
 
-  for f in "index.html" "css/style.css" "js/app.js"; do
+  for f in "index.html" "css/style.css" "js/app.js" "js/icons.js"; do
     if [ ! -f "$OUTPUT_DIR/$f" ]; then
       echo "  ERROR: Falta $f"
       errores=$(( errores + 1 ))
@@ -2018,11 +2416,13 @@ mostrar_resumen() {
   echo ""
   echo "  Directorio: $OUTPUT_DIR/"
   echo "  Pagina principal: $OUTPUT_DIR/index.html"
+  echo "  Tema: $THEME  |  Codename: $EVENT_CODENAME"
   echo ""
   echo "  Estructura generada:"
   echo "  ├── index.html"
   echo "  ├── css/style.css"
   echo "  ├── js/app.js"
+  echo "  ├── js/icons.js"
   echo "  ├── assets/"
   echo "  │   ├── description/ (JSON data)"
   echo "  │   └── img/"
@@ -2053,6 +2453,7 @@ main() {
   copiar_assets_desde_fuente
   generar_css
   generar_js
+  generar_icons_js
   generar_logo_svg
   generar_hero_svg
   generar_favicon
