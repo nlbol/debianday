@@ -95,7 +95,7 @@ CRONOGRAMA+=(
   "09:00|09:30|Registro y bienvenida|Organización|Registro|Entrada principal|Presentación del DebianDay|#0B0F1A"
   "09:30|10:15|Entre el Commit y el Boot: Vulnerando Entornos mediante Automatización Estándar|Fersho Uno|Conferencia|Auditorio|Historia y visión del proyecto Debian|#0B0F1A"
   "10:15|11:00|MiniOS Potencia máxima en tu PC|Alex Valdivia Vega|Conferencia|Auditorio|Sacale el jugo a tu ordenador con la distro mas potente y ligera|#0B0F1A"
-  "10:30|11:30||Fersho Uno|Taller|Laboratorio|El Arte de Empaquetar: Construye tus propios .deb paso a paso|#0B0F1A"
+  "10:30|11:30|El Arte de Empaquetar: Construye tus propios .deb paso a paso|Fersho Uno|Taller|Laboratorio|-|#0B0F1A"
   "11:00|11:45|Porque Aprender Linux|Rudy Flores|Conferencia|Auditorio|Conoce las ventajas de poder aprender Linux|#0B0F1A"
   "12:05|12:20|Cierre y sorteos|Organizacion|Despedida|Auditorio|Palabras finales y cierre del evento|#0B0F1A"
 )
