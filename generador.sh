@@ -82,8 +82,8 @@ CANTIDAD_PARTICIPANTES="25+"
 declare -a SPEAKERS
 SPEAKERS+=(
   "assets/img/speakers/fershouno.jpeg|Fersho Uno|Administrador de Infraestructura|FershoUno|Miembro de Nucleo Linux Bolivia y contribuidor FOSS. Especialista en Infraestructura TI.|https://github.com/FershoUno||https://www.linkedin.com/in/fershouno|https://fershouno.me"
-  "assets/img/speakers/rudy.jpeg|Rudy Flores|Miembro de la Comunidad Nucleo Linux Bolivia|MrRobot|investigador||||"
-  "assets/img/speakers/alex.jpeg|Alex Valdivia Vega|Miembro de la Comunidad Nucleo Linux Bolivia|AlexPower|Investigador||||"
+  "assets/img/speakers/tux.png|Rudy Flores|Miembro de la Comunidad Nucleo Linux Bolivia|RudyFlores|||||"
+  "assets/img/speakers/tux.png|Alex Valdivia Vega|Miembro de la Comunidad Nucleo Linux Bolivia|AlexPower|||||"
 )
 
 ####################################################
@@ -92,10 +92,11 @@ SPEAKERS+=(
 # Formato: "HORA_INICIO|HORA_FIN|TITULO|PONENTE|TIPO|UBICACION|DESCRIPCION|COLOR"
 declare -a CRONOGRAMA
 CRONOGRAMA+=(
-  "09:00|09:30|Registro y bienvenida|Organización|Registro|Entrada principal|Presentación del DebianDay|#0B0F1A"
-  "09:30|10:15|Entre el Commit y el Boot: Vulnerando Entornos mediante Automatización Estándar|Fersho Uno|Conferencia|Auditorio|Historia y visión del proyecto Debian|#0B0F1A"
-  "10:15|11:00|MiniOS Potencia máxima en tu PC|Alex Valdivia Vega|Conferencia|Auditorio|Sacale el jugo a tu ordenador con la distro mas potente y ligera|#0B0F1A"
-  "10:30|11:30|El Arte de Empaquetar: Construye tus propios .deb paso a paso|Fersho Uno|Taller|Laboratorio|-|#0B0F1A"
+  "09:00|09:15|Registro y bienvenida|Organización|Registro|Entrada principal|Presentación del DebianDay|#0B0F1A"
+  "09:15|10:00|Entre el Commit y el Boot: Vulnerando Entornos mediante Automatización Estándar|Fersho Uno|Conferencia|Auditorio|Historia y visión del proyecto Debian|#0B0F1A"
+  "10:00|10:30|MiniOS Potencia máxima en tu PC|Alex Valdivia Vega|Conferencia|Auditorio|Sacale el jugo a tu ordenador con la distro mas potente y ligera|#0B0F1A"
+  "10:00|11:00|El arte de Empaquetar tu programa en .deb|Fersho Uno|Taller|Laboratorio|Construye tus propos .deb paso a paso|#0B0F1A"
+  "10:30|11:00|Ronda de preguntas y premios sorpresas|Organización|Confraternización|Auditorio||#0B0F1A"
   "11:00|11:45|Porque Aprender Linux|Rudy Flores|Conferencia|Auditorio|Conoce las ventajas de poder aprender Linux|#0B0F1A"
   "12:05|12:20|Cierre y sorteos|Organizacion|Despedida|Auditorio|Palabras finales y cierre del evento|#0B0F1A"
 )
