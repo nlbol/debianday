@@ -81,9 +81,9 @@ CANTIDAD_PARTICIPANTES="25+"
 # Formato: "FOTO|NOMBRE|CARGO|EMPRESA|BIO|GITHUB|MASTODON|LINKEDIN|WEB"
 declare -a SPEAKERS
 SPEAKERS+=(
-  "assets/img/speakers/fershouno.jpeg|Fersho Uno|Administrador de Infraestructura|FershoUno|Miembro de Nucleo Linux Bolivia y contribuidor FOSS. Especialista en Infraestructura TI.|https://github.com/FershoUno||https://www.linkedin.com/in/fershouno|https://fershouno.me"
-  "assets/img/speakers/tux.png|Rudy Flores|Miembro de la Comunidad Nucleo Linux Bolivia|RudyFlores|||||"
-  "assets/img/speakers/tux.png|Alex Valdivia Vega|Miembro de la Comunidad Nucleo Linux Bolivia|AlexPower|||||"
+  "assets/img/speakers/fershouno.jpeg|Fersho Uno|Comunidad Nucleo Linux Bolivia|FershoUno|Usuario de GNU/Linux y contribuidor FOSS. Especialista en Infraestructura TI.|https://github.com/FershoUno||https://www.linkedin.com/in/fershouno|https://fershouno.me"
+  "assets/img/speakers/rudyflores.jpeg|Rudy Flores|Comunidad Nucleo Linux Bolivia|RudyFlores|||||"
+  "assets/img/speakers/alexpower.jpeg|Alex Valdivia Vega|Comunidad Nucleo Linux Bolivia|AlexPower|specialista en Hardware Certificado Cisco  Docente HardLab Academy   Consultor Capacitador||||"
 )
 
 ####################################################
@@ -93,12 +93,12 @@ SPEAKERS+=(
 declare -a CRONOGRAMA
 CRONOGRAMA+=(
   "09:00|09:15|Registro y bienvenida|Organización|Registro|Entrada principal|Presentación del DebianDay|#0B0F1A"
-  "09:15|10:00|Entre el Commit y el Boot: Vulnerando Entornos mediante Automatización Estándar|Fersho Uno|Conferencia|Auditorio|Historia y visión del proyecto Debian|#0B0F1A"
-  "10:00|10:30|MiniOS Potencia máxima en tu PC|Alex Valdivia Vega|Conferencia|Auditorio|Sacale el jugo a tu ordenador con la distro mas potente y ligera|#0B0F1A"
-  "10:00|11:00|El arte de Empaquetar tu programa en .deb|Fersho Uno|Taller|Laboratorio|Construye tus propos .deb paso a paso|#0B0F1A"
-  "10:30|11:00|Ronda de preguntas y premios sorpresas|Organización|Confraternización|Auditorio||#0B0F1A"
-  "11:00|11:45|Porque Aprender Linux|Rudy Flores|Conferencia|Auditorio|Conoce las ventajas de poder aprender Linux|#0B0F1A"
-  "12:05|12:20|Cierre y sorteos|Organizacion|Despedida|Auditorio|Palabras finales y cierre del evento|#0B0F1A"
+  "09:15|10:00|MiniOS Potencia máxima en tu PC|Alex Valdivia Vega|Conferencia|Auditorio|Sácale el jugo a tu ordenador con la distro mas potente y ligera|#0B0F1A"
+  "10:00|10:45|Porque Aprender Linux|Rudy Flores|Conferencia|Auditorio|Conoce las ventajas de poder aprender Linux|#0B0F1A"
+  "10:00|11:00|El arte de Empaquetar tu programa en .deb|Fersho Uno|Taller|Laboratorio|Comprende como un desarrollador puede empaquetar su programa y distribuirlo|#0B0F1A"
+  "11:00|11:15|Ronda de preguntas y premios sorpresas|Organización|Confraternización|Auditorio||#0B0F1A"
+  "11:15|12:00|Malware over Hooks|Fersho Uno|Conferencia|Auditorio|Cómo los hooks pueden ser utilizados para ejecutar código malicioso sin ser detectados.|#0B0F1A"
+  "12:05|12:20|Cierre y sorteos|Organización|Despedida|Auditorio|Palabras finales y cierre del evento|#0B0F1A"
 )
 
 ####################################################
