@@ -24,7 +24,7 @@ LUGAR="FICCT - UAGRM"
 CIUDAD="Santa Cruz"
 PAIS="Bolivia"
 BOTON_REGISTRO="Registrarme"
-URL_REGISTRO="https://cloud.nluagrm.org"
+URL_REGISTRO="https://cloud.nluagrm.org/apps/forms/s/4bRXD2ddDnw9bHXwLdLksHZn"
 DOMINIO="https://debianday.nucleolinux.org"
 
 ####################################################
