@@ -73,7 +73,7 @@ CANTIDAD_CONFERENCIAS="3"
 CANTIDAD_TALLERES="1"
 CANTIDAD_PONENTES="4"
 CANTIDAD_PATROCINADORES="3"
-CANTIDAD_PARTICIPANTES="25+"
+CANTIDAD_PARTICIPANTES="0+"
 
 ####################################################
 # SPEAKERS
@@ -94,8 +94,8 @@ declare -a CRONOGRAMA
 CRONOGRAMA+=(
   "09:00|09:15|Registro y bienvenida|Organización|Registro|Entrada principal|Presentación del DebianDay|#0B0F1A"
   "09:15|10:00|MiniOS Potencia máxima en tu PC|Alex Valdivia Vega|Conferencia|Auditorio|Sácale el jugo a tu ordenador con la distro mas potente y ligera|#0B0F1A"
-  "10:00|10:45|Porque Aprender Linux|Rudy Flores|Conferencia|Auditorio|Conoce las ventajas de poder aprender Linux|#0B0F1A"
   "10:00|11:00|El arte de Empaquetar tu programa en .deb|Fersho Uno|Taller|Laboratorio|Comprende como un desarrollador puede empaquetar su programa y distribuirlo|#0B0F1A"
+  "10:00|10:45|Porque Aprender Linux|Rudy Flores|Conferencia|Auditorio|Conoce las ventajas de poder aprender Linux|#0B0F1A"
   "11:00|11:15|Ronda de preguntas y premios sorpresas|Organización|Confraternización|Auditorio||#0B0F1A"
   "11:15|12:00|Malware over Hooks|Fersho Uno|Conferencia|Auditorio|Cómo los hooks pueden ser utilizados para ejecutar código malicioso sin ser detectados.|#0B0F1A"
   "12:05|12:20|Cierre y sorteos|Organización|Despedida|Auditorio|Palabras finales y cierre del evento|#0B0F1A"
