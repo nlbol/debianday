@@ -46,7 +46,7 @@ ENABLE_THEME_SWITCH=false
 # Valores: default, debian, santa-cruz, terminal, midnight,
 #          nord, dracula, catppuccin, gruvbox, ubuntu, mint, solarized
 ####################################################
-THEME="default"
+THEME="debian"
 
 ####################################################
 # HERO
