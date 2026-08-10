@@ -139,7 +139,7 @@ declare -a SPONSORS
 SPONSORS+=(
   "Nucleo Linux Bolivia|assets/img/sponsors/nlbol.png|https://nucleolinux.org|Community"
   "Nucleo Linux UAGRM|assets/img/sponsors/nluagrm.png|https://nluagrm.org|Community"
-  "FICCT|assets/img/sponsors/ficct.png|httpa://ficct.uagrm.edu.bo"
+  "FICCT|assets/img/sponsors/ficct.png|https://ficct.uagrm.edu.bo|Community"
 )
 
 ####################################################
@@ -170,7 +170,7 @@ LICENCIA="CC BY-SA 4.0"
 ####################################################
 # POSTER / IMAGEN PRINCIPAL
 ####################################################
-POSTER_IMAGE="assets/img/poster.svg"
+POSTER_IMAGE="assets/img/afiche/poster.png"
 
 ####################################################
 # LOGOS
@@ -185,13 +185,14 @@ FAVICON="assets/img/icons/debian-favicon.svg"
 LOGO_PRINCIPAL="assets/img/logos/debian-logo.svg"
 LOGO_CLARO="assets/img/logos/logo-light.svg"
 LOGO_OSCURO="assets/img/logos/logo-dark.svg"
-IMAGEN_HERO="assets/img/hero/hero-bg.svg"
-IMAGEN_HERO_BG="assets/img/hero/hero-bg.svg"
-
+IMAGEN_HERO="assets/img/logos/debian-logo.svg"
+#IMAGEN_HERO="assets/img/hero/hero-bg.svg"
+#IMAGEN_HERO_BG="assets/img/hero/hero-bg.svg"
+IMAGEN_HERO_BG="assets/img/logos/debian-logo.svg"
 ####################################################
 # LOGO COMO FONDO (WATERMARK)
 ####################################################
-ENABLE_DEBIAN_BACKGROUND=true
+ENABLE_DEBIAN_BACKGROUND=false
 DEBIAN_BACKGROUND_IMAGE="assets/img/background/debian-watermark.svg"
 DEBIAN_BACKGROUND_OPACITY="0.03"
 DEBIAN_BACKGROUND_SIZE="contain"
