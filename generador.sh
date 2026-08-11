@@ -170,7 +170,7 @@ LICENCIA="CC BY-SA 4.0"
 ####################################################
 # POSTER / IMAGEN PRINCIPAL
 ####################################################
-POSTER_IMAGE="assets/img/afiche/poster.png"
+POSTER_IMAGE="assets/img/afiche/poster.webp"
 
 ####################################################
 # LOGOS
