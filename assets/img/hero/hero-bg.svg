@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" fill="none">
+  <defs>
+    <linearGradient id="hero-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4a0b8" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#a0c4e8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#c5a8e2" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#hero-grad)"/>
+  <circle cx="1200" cy="200" r="300" fill="#f4a0b8" opacity="0.08"/>
+  <circle cx="200" cy="700" r="250" fill="#a0c4e8" opacity="0.06"/>
+  <circle cx="700" cy="450" r="200" fill="#c5a8e2" opacity="0.05"/>
+  <path d="M0 800 Q360 700 720 800 T1440 750 L1440 900 L0 900 Z" fill="#f4a0b8" opacity="0.03"/>
+  <path d="M0 850 Q480 780 960 850 T1440 800 L1440 900 L0 900 Z" fill="#a0c4e8" opacity="0.02"/>
+</svg>

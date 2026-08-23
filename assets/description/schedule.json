@@ -1,0 +1,71 @@
+[{
+  "start": "09:00",
+  "end": "09:15",
+  "title": "Registro y bienvenida",
+  "speaker": "Organización",
+  "type": "Registro",
+  "location": "Entrada principal",
+  "description": "Presentación del DebianDay",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "09:15",
+  "end": "10:00",
+  "title": "MiniOS Potencia máxima en tu PC",
+  "speaker": "Alex Valdivia Vega",
+  "type": "Conferencia",
+  "location": "Auditorio",
+  "description": "Sácale el jugo a tu ordenador con la distro mas potente y ligera",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "10:00",
+  "end": "11:00",
+  "title": "El arte de Empaquetar tu programa en .deb",
+  "speaker": "Fersho Uno",
+  "type": "Taller",
+  "location": "Laboratorio",
+  "description": "Comprende como un desarrollador puede empaquetar su programa y distribuirlo",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "10:00",
+  "end": "10:45",
+  "title": "Porque Aprender Linux",
+  "speaker": "Rudy Flores",
+  "type": "Conferencia",
+  "location": "Auditorio",
+  "description": "Conoce las ventajas de poder aprender Linux",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "11:00",
+  "end": "11:15",
+  "title": "Ronda de preguntas y premios sorpresas",
+  "speaker": "Organización",
+  "type": "Confraternización",
+  "location": "Auditorio",
+  "description": "",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "11:15",
+  "end": "12:00",
+  "title": "Malware over Hooks",
+  "speaker": "Fersho Uno",
+  "type": "Conferencia",
+  "location": "Auditorio",
+  "description": "Cómo los hooks pueden ser utilizados para ejecutar código malicioso sin ser detectados.",
+  "color": "#0B0F1A"
+}
+,{
+  "start": "12:05",
+  "end": "12:20",
+  "title": "Cierre y sorteos",
+  "speaker": "Organización",
+  "type": "Despedida",
+  "location": "Auditorio",
+  "description": "Palabras finales y cierre del evento",
+  "color": "#0B0F1A"
+}
+]

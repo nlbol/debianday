@@ -1,0 +1,21 @@
+[{
+  "question": "¿El evento es gratuito?",
+  "answer": "Sí, DebianDay es completamente gratuito para todos los asistentes."
+}
+,{
+  "question": "¿Necesito conocimientos previos?",
+  "answer": "No, el evento está diseñado para todos los niveles, desde principiantes hasta expertos."
+}
+,{
+  "question": "¿Debo llevar mi computadora?",
+  "answer": "Recomendamos traer tu laptop para participar en los talleres prácticos."
+}
+,{
+  "question": "¿Habrá certificados?",
+  "answer": "No, no se entregarán certificados de asistencia."
+}
+,{
+  "question": "¿Habrá traducción?",
+  "answer": "Las charlas serán en español. Algunas podrían tener soporte en inglés."
+}
+]

@@ -1,0 +1,19 @@
+[{
+  "name": "Nucleo Linux Bolivia",
+  "logo": "assets/img/sponsors/nlbol.png",
+  "url": "https://nucleolinux.org",
+  "category": "Community"
+}
+,{
+  "name": "Nucleo Linux UAGRM",
+  "logo": "assets/img/sponsors/nluagrm.png",
+  "url": "https://nluagrm.org",
+  "category": "Community"
+}
+,{
+  "name": "FICCT",
+  "logo": "assets/img/sponsors/ficct.png",
+  "url": "https://ficct.uagrm.edu.bo",
+  "category": "Community"
+}
+]

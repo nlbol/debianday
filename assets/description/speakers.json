@@ -1,0 +1,34 @@
+[{
+  "photo": "assets/img/speakers/fershouno.jpeg",
+  "name": "Fersho Uno",
+  "role": "Comunidad Nucleo Linux Bolivia",
+  "company": "FershoUno",
+  "bio": "Usuario de GNU/Linux y contribuidor FOSS. Especialista en Infraestructura TI.",
+  "github": "https://github.com/FershoUno",
+  "mastodon": "",
+  "linkedin": "https://www.linkedin.com/in/fershouno",
+  "web": "https://fershouno.me"
+}
+,{
+  "photo": "assets/img/speakers/rudyflores.jpeg",
+  "name": "Rudy Flores",
+  "role": "Comunidad Nucleo Linux Bolivia",
+  "company": "RudyFlores",
+  "bio": "",
+  "github": "",
+  "mastodon": "",
+  "linkedin": "",
+  "web": ""
+}
+,{
+  "photo": "assets/img/speakers/alexpower.jpeg",
+  "name": "Alex Valdivia Vega",
+  "role": "Comunidad Nucleo Linux Bolivia",
+  "company": "AlexPower",
+  "bio": "specialista en Hardware Certificado Cisco  Docente HardLab Academy   Consultor Capacitador",
+  "github": "",
+  "mastodon": "",
+  "linkedin": "",
+  "web": ""
+}
+]
